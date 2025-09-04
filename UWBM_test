@@ -6,7 +6,7 @@ author:
   - https://globalbioticinteractions.org/contribute 
   - https://github.com/AgentschapPlantentuinMeise/ashForestInteractions/issues 
 abstract: |
-  Natural history collections are part of our global heritage and a priceless resource for research and education. (https://spnhc.org/what-spnhc-does/)  Information about the contents of Natural History Collections may be captured in datasets and published digitally via the Global Biodiversity Information Facility (GBIF) Integrated Publishing Toolkit (IPT) (https://www.gbif.org/ipt) as Darwin Core Archives (DwC-A) (https://ipt.gbif.org/manual/en/ipt/latest/dwca-guide#what-is-darwin-core-archive-dwc-a). We present a review and archiving process for such an openly accessible digital dataset of known origin and discuss its outcome. The dataset under review, named _insert_, has fingerprint _insert_, is _insert_ in size and contains _insert_ occurences with _insert_ unique taxon names. This report includes detailed summaries of occurence data, a taxonomic summary, and an archived version of the dataset from which the reviews are derived.
+  Natural history collections are part of our global heritage and a priceless resource for research and education. (https://spnhc.org/what-spnhc-does/)  Information about the contents of Natural History Collections may be captured in datasets and published digitally via the Global Biodiversity Information Facility (GBIF) Integrated Publishing Toolkit (IPT) (https://www.gbif.org/ipt) as Darwin Core Archives (DwC-A) (https://ipt.gbif.org/manual/en/ipt/latest/dwca-guide#what-is-darwin-core-archive-dwc-a). We present a review and archiving process for such an openly accessible digital dataset of known origin and discuss its outcome. The dataset under review, named _insert_, has fingerprint _insert_, is _insert_ in size and contains _insert_ occurences with _insert_ unique taxon names. This report includes summaries of collection statistics, taxonomic context, geographic context, temporal context, and an archived version of the dataset from which the reviews are derived.
 
 bibliography: biblio.bib
 keywords:
@@ -60,22 +60,13 @@ elton pull AgentschapPlantentuinMeise/ashForestInteractions
 # generate review notes
 elton review AgentschapPlantentuinMeise/ashForestInteractions\
  > review.tsv
-
-# export indexed interaction records
-elton interactions AgentschapPlantentuinMeise/ashForestInteractions\
- > interactions.tsv
-
-# export names and align them with the Catalogue of Life using Nomer 
-elton names AgentschapPlantentuinMeise/ashForestInteractions\
- | nomer append col\
- > name-alignment.tsv
 ~~~
 
 or visually, in a process diagram.
 
 ![Review Process Overview](process.svg)
 
-You can find a copy of the full review script at [check-data.sh](check-dataset.sh). See also [GitHub](https://github.com/globalbioticinteractions/globinizer/blob/master/check-dataset.sh) and [Codeberg](https://codeberg.org/globalbioticinteractions/globinizer/src/branch/master/check-dataset.sh). 
+You can find a copy of the full review script at [_insert_]. See also [GitHub](_insert_). 
 
 # Results
 
@@ -98,63 +89,6 @@ The following files are produced in this review:
  [indexed-citations.csv.gz](indexed-citations.csv.gz) | list of distinct reference citations for reviewed species interaction claims in gzipped comma-separated values file format 
  [indexed-citations.html.gz](indexed-citations.html.gz) | list of distinct reference citations for reviewed species interactions claims in gzipped html file format
  [indexed-citations.tsv.gz](indexed-citations.tsv.gz) | list of distinct reference citations for reviewed species interaction claims in gzipped tab-separated values format
- [indexed-interactions-col-family-col-family.svg](indexed-interactions-col-family-col-family.svg) | network diagram showing the taxon family to taxon family interaction claims in the dataset under review as interpreted by the Catalogue of Life via Nomer Corpus of Taxonomic Resources [@NomerCorpus]
- [indexed-interactions-col-kingdom-col-kingdom.svg](indexed-interactions-col-kingdom-col-kingdom.svg) | network diagram showing the taxon kingdom to taxon kingom interaction claims in the dataset under review as interpreted by the Catalogue of Life via Nomer Corpus of Taxonomic Resources [@NomerCorpus]
- [indexed-interactions.csv.gz](indexed-interactions.csv.gz) | species interaction claims indexed from the dataset under review in gzipped comma-separated values format 
- [indexed-interactions.html.gz](indexed-interactions.html.gz) | species interaction claims indexed from the dataset under review in gzipped html format
- [indexed-interactions.tsv.gz](indexed-interactions.tsv.gz) | species interaction claims indexed from the dataset under review in gzipped tab-separated values format
- [indexed-interactions.parquet](indexed-interactions.parquet) | species interaction claims indexed from the dataset under review in Apache Parquet format
- [indexed-interactions-sample.csv](indexed-interactions-sample.csv) | list of species interaction claims indexed from the dataset under review in gzipped comma-separated values format
- [indexed-interactions-sample.html](indexed-interactions-sample.html) | first 500 species interaction claims indexed from the dataset under review in html format 
- [indexed-interactions-sample.tsv](indexed-interactions-sample.tsv) | first 500 species interaction claims indexed from the dataset under review in tab-separated values format
- [indexed-names.csv.gz](indexed-names.csv.gz) | taxonomic names indexed from the dataset under review in gzipped comma-separated values format 
- [indexed-names.html.gz](indexed-names.html.gz) | taxonomic names found in the dataset under review in gzipped html format
- [indexed-names.tsv.gz](indexed-names.tsv.gz) | taxonomic names found in the dataset under review in gzipped tab-separated values format
- [indexed-names.parquet](indexed-names.parquet) | taxonomic names found in the dataset under review in Apache Parquet format
- [indexed-names-resolved-col.csv.gz](indexed-names-resolved-col.csv.gz) | taxonomic names found in the dataset under review aligned with the Catalogue of Life as accessed through the Nomer Corpus of Taxonomic Resources [@NomerCorpus] in gzipped comma-separated values format
- [indexed-names-resolved-col.html.gz](indexed-names-resolved-col.html.gz) | taxonomic names found in the dataset under review aligned with the Catalogue of Life as accessed through the Nomer Corpus of Taxonomic Resources [@NomerCorpus] in gzipped html format
- [indexed-names-resolved-col.tsv.gz](indexed-names-resolved-col.tsv.gz) | taxonomic names found in the dataset under review aligned with the Catalogue of Life as accessed through the Nomer Corpus of Taxonomic Resources [@NomerCorpus] in gzipped tab-separated values format
- [indexed-names-resolved-col.parquet](indexed-names-resolved-col.parquet) | taxonomic names found in the dataset under review aligned with the Catalogue of Life as accessed through the Nomer Corpus of Taxonomic Resources [@NomerCorpus] in Apache Parquet format
- [indexed-names-resolved-discoverlife.csv.gz](indexed-names-resolved-discoverlife.csv.gz) | taxonomic names found in the dataset under review aligned with Discover Life bee species checklist as accessed through the Nomer Corpus of Taxonomic Resources [@NomerCorpus] in gzipped comma-separated values format
- [indexed-names-resolved-discoverlife.html.gz](indexed-names-resolved-discoverlife.html.gz) | taxonomic names found in the dataset under review aligned with Discover Life bee species checklist as accessed through the Nomer Corpus of Taxonomic Resources [@NomerCorpus] in gzipped html format
- [indexed-names-resolved-discoverlife.tsv.gz](indexed-names-resolved-discoverlife.tsv.gz) | taxonomic names found in the dataset under review aligned with Discover Life bee species checklist as accessed through the Nomer Corpus of Taxonomic Resources [@NomerCorpus] in gzipped tab-separated values format
- [indexed-names-resolved-discoverlife.parquet](indexed-names-resolved-discoverlife.parquet) | taxonomic names found in the dataset under review aligned with Discover Life bee species checklist as accessed through the Nomer Corpus of Taxonomic Resources [@NomerCorpus] in Apache Parquet format
- [indexed-names-resolved-gbif.csv.gz](indexed-names-resolved-gbif.csv.gz) | taxonomic names found in the dataset under review aligned with GBIF Backbone Taxonomy as accessed through the Nomer Corpus of Taxonomic Resources [@NomerCorpus] in gzipped comma-separated values format
- [indexed-names-resolved-gbif.html.gz](indexed-names-resolved-gbif.html.gz) | taxonomic names found in the dataset under review aligned with GBIF Backbone Taxonomy as accessed through the Nomer Corpus of Taxonomic Resources [@NomerCorpus] in gzipped html format
- [indexed-names-resolved-gbif.tsv.gz](indexed-names-resolved-gbif.tsv.gz) | taxonomic names found in the dataset under review aligned with GBIF Backbone Taxonomy as accessed through the Nomer Corpus of Taxonomic Resources [@NomerCorpus]  in gzipped tab-separated values format
- [indexed-names-resolved-gbif.parquet](indexed-names-resolved-gbif.parquet) | taxonomic names found in the dataset under review aligned with GBIF Backbone Taxonomy as accessed through the Nomer Corpus of Taxonomic Resources [@NomerCorpus]  in Apache Parquet format
- [indexed-names-resolved-itis.csv.gz](indexed-names-resolved-itis.csv.gz) | taxonomic names found in the dataset under review aligned with  Integrated Taxonomic Information System (ITIS) as accessed through the Nomer Corpus of Taxonomic Resources [@NomerCorpus]  in gzipped comma-separated values format
- [indexed-names-resolved-itis.html.gz](indexed-names-resolved-itis.html.gz) | taxonomic names found in the dataset under review aligned with Integrated Taxonomic Information System (ITIS) as accessed through the Nomer Corpus of Taxonomic Resources [@NomerCorpus]  in gzipped html format
- [indexed-names-resolved-itis.tsv.gz](indexed-names-resolved-itis.tsv.gz) | taxonomic names found in the dataset under review aligned with Integrated Taxonomic Information System (ITIS) as accessed through the Nomer Corpus of Taxonomic Resources [@NomerCorpus]  in gzipped tab-separated values format
- [indexed-names-resolved-itis.parquet](indexed-names-resolved-itis.parquet) | taxonomic names found in the dataset under review aligned with Integrated Taxonomic Information System (ITIS) as accessed through the Nomer Corpus of Taxonomic Resources [@NomerCorpus]  in Apache Parquet format
- [indexed-names-resolved-mdd.csv.gz](indexed-names-resolved-mdd.csv.gz) | taxonomic names found in the dataset under review aligned with the Mammal Diversity Database as accessed through the Nomer Corpus of Taxonomic Resources [@NomerCorpus] in gzipped comma-separated values format
- [indexed-names-resolved-mdd.html.gz](indexed-names-resolved-mdd.html.gz) | taxonomic names found in the dataset under review aligned with Mammal Diversity Database as accessed through the Nomer Corpus of Taxonomic Resources [@NomerCorpus] in gzipped html format
- [indexed-names-resolved-mdd.tsv.gz](indexed-names-resolved-mdd.tsv.gz) | taxonomic names found in the dataset under review aligned with Mammal Diversity Database as accessed through the Nomer Corpus of Taxonomic Resources [@NomerCorpus] in gzipped tab-separated values format
- [indexed-names-resolved-mdd.parquet](indexed-names-resolved-mdd.parquet) | taxonomic names found in the dataset under review aligned with Mammal Diversity Database as accessed through the Nomer Corpus of Taxonomic Resources [@NomerCorpus] in Apache Parquet format
- [indexed-names-resolved-ncbi.csv.gz](indexed-names-resolved-ncbi.csv.gz) | taxonomic names found in the dataset under review aligned with the NCBI Taxonomy as accessed through the Nomer Corpus of Taxonomic Resources [@NomerCorpus] in gzipped comma-separated values format
- [indexed-names-resolved-ncbi.html.gz](indexed-names-resolved-ncbi.html.gz) | taxonomic names found in the dataset under review aligned with the NCBI Taxonomy as accessed through the Nomer Corpus of Taxonomic Resources [@NomerCorpus] in gzipped html format
- [indexed-names-resolved-ncbi.tsv.gz](indexed-names-resolved-ncbi.tsv.gz) | taxonomic names found in the dataset under review aligned with the NCBI Taxonomy as accessed through the Nomer Corpus of Taxonomic Resources [@NomerCorpus] in gzipped tab-separated values format
- [indexed-names-resolved-ncbi.parquet](indexed-names-resolved-ncbi.parquet) | taxonomic names found in the dataset under review aligned with the NCBI Taxonomy as accessed through the Nomer Corpus of Taxonomic Resources [@NomerCorpus] in Apache Parquet format
- [indexed-names-resolved-pbdb.csv.gz](indexed-names-resolved-pbdb.csv.gz) | taxonomic names found in the dataset under review aligned with the Paleobiology Database as accessed through the Nomer Corpus of Taxonomic Resources [@NomerCorpus] in gzipped comma-separated values format 
- [indexed-names-resolved-pbdb.html.gz](indexed-names-resolved-pbdb.html.gz) | taxonomic names found in the dataset under review aligned with Paleobiology Database as accessed through the Nomer Corpus of Taxonomic Resources [@NomerCorpus] in gzipped html format
- [indexed-names-resolved-pbdb.tsv.gz](indexed-names-resolved-pbdb.tsv.gz) | taxonomic names found in the dataset under review aligned with Paleobiology Database as accessed through the Nomer Corpus of Taxonomic Resources [@NomerCorpus] in gzipped tab-separated values format
- [indexed-names-resolved-pbdb.parquet](indexed-names-resolved-pbdb.parquet) | taxonomic names found in the dataset under review aligned with Paleobiology Database as accessed through the Nomer Corpus of Taxonomic Resources [@NomerCorpus] in Apache Parquet format
- [indexed-names-resolved-tpt.csv.gz](indexed-names-resolved-tpt.csv.gz) | taxonomic names found in the dataset under review aligned with the Terrestrial Parasite Tracker (TPT) Taxonomic Resource as accessed through the Nomer Corpus of Taxonomic Resources [@NomerCorpus] in gzipped comma-separated values format
- [indexed-names-resolved-tpt.html.gz](indexed-names-resolved-tpt.html.gz) | taxonomic names found in the dataset under review aligned with the Terrestrial Parasite Tracker (TPT) Taxonomic Resource as accessed through the Nomer Corpus of Taxonomic Resources [@NomerCorpus] in gzipped html format
- [indexed-names-resolved-tpt.tsv.gz](indexed-names-resolved-tpt.tsv.gz) | taxonomic names found in the dataset under review aligned with the Terrestrial Parasite Tracker (TPT) Taxonomic Resource as accessed through the Nomer Corpus of Taxonomic Resources [@NomerCorpus] in gzipped tab-separated values format 
- [indexed-names-resolved-tpt.parquet](indexed-names-resolved-tpt.parquet) | taxonomic names found in the dataset under review aligned with the Terrestrial Parasite Tracker (TPT) Taxonomic Resource as accessed through the Nomer Corpus of Taxonomic Resources [@NomerCorpus] in Apache Parquet format 
- [indexed-names-resolved-wfo.csv.gz](indexed-names-resolved-wfo.csv.gz) | taxonomic names found in the dataset under review aligned with the World of Flora Online as accessed through the Nomer Corpus of Taxonomic Resources [@NomerCorpus] in gzipped comma-separated values format
- [indexed-names-resolved-wfo.html.gz](indexed-names-resolved-wfo.html.gz) | taxonomic names found in the dataset under review aligned with the World of Flora Online as accessed through the Nomer Corpus of Taxonomic Resources [@NomerCorpus] in gzipped html format
- [indexed-names-resolved-wfo.tsv.gz](indexed-names-resolved-wfo.tsv.gz) | taxonomic names found in the dataset under review aligned with the World of Flora Online as accessed through the Nomer Corpus of Taxonomic Resources [@NomerCorpus] in gzipped tab-separated values format
- [indexed-names-resolved-wfo.parquet](indexed-names-resolved-wfo.parquet) | taxonomic names found in the dataset under review aligned with the World of Flora Online as accessed through the Nomer Corpus of Taxonomic Resources [@NomerCorpus] in Apache Parquet format
- [indexed-names-resolved-worms.csv.gz](indexed-names-resolved-worms.csv.gz) | taxonomic names found in the dataset under review aligned with the World Register of Marine Species (WoRMS) as accessed through the Nomer Corpus of Taxonomic Resources [@NomerCorpus] in gzipped comma-separated values format
- [indexed-names-resolved-worms.html.gz](indexed-names-resolved-worms.html.gz) | taxonomic names found in the dataset under review aligned with the World Register of Marine Species (WoRMS) as accessed through the Nomer Corpus of Taxonomic Resources [@NomerCorpus] in gzipped html format
- [indexed-names-resolved-worms.tsv.gz](indexed-names-resolved-worms.tsv.gz) | taxonomic names found in the dataset under review aligned with the World Register of Marine Species (WoRMS) as accessed through the Nomer Corpus of Taxonomic Resources [@NomerCorpus] in gzipped tab-separated values format
- [indexed-names-resolved-worms.parquet](indexed-names-resolved-worms.parquet) | taxonomic names found in the dataset under review aligned with the World Register of Marine Species (WoRMS) as accessed through the Nomer Corpus of Taxonomic Resources [@NomerCorpus] in Apache Parquet format
- [indexed-names-sample.csv](indexed-names-sample.csv) | first 500 taxonomic names found in the dataset under review in comma-separated values format
- [indexed-names-sample.html](indexed-names-sample.html) | first 500 taxonomic names found in the dataset under review in html format
- [indexed-names-sample.tsv](indexed-names-sample.tsv) | first 500 taxonomic names found in the dataset under review in tab-separated values format
- [interaction.svg](interaction.svg) | diagram summarizing the data model used to index species interaction claims
  [nanopub-sample.trig](nanopub-sample.trig) | first 500 species interaction claims as expressed in the nanopub format [@Nanopub]
  [nanopub.trig.gz](nanopub.trig.gz) | species interaction claims as expressed in the nanopub format [@Nanopub]
  [process.svg](process.svg) | diagram summarizing the data review processing workflow 
@@ -176,7 +110,7 @@ Note that [_data.zip_](data.zip) file in this archive contains the complete, unm
 
 ![Biotic Interaction Data Model](interaction.svg)
 
-In this review, collection statistics are modeled as Latimer Core values.  
+In this review, collection statistics are modeled as Darwin Core values. In addition, metadata provided by the collection is reviewed for compliance with the Latimer Core Standard for describing collections (https://github.com/tdwg/ltc/wiki/1.-Overview-of-Latimer-Core). "Latimer Core has been developed to fill this gap: it is designed to be a flexible, sustainable framework of terms that can be assembled to create records that accurately represent a grouping of objects at any level of granularity, from an entire collection of an institution to a few objects in a single drawer." 
 
 The dataset under review, named _insert_, is _insert_ in size and contains _insert occurence records with _insert_ unique taxon names (e.g., Fraxinus excelsior).
 
@@ -185,255 +119,50 @@ An exhaustive list of occurences can be found in gzipped [csv](indexed-interacti
 The exhaustive list was used to create the following data summaries below.
 
 ### Collection Growth 
-| number of unique occurences | number of occurences added since last review | number of occurences removed since last review 
-| --- | --- | --- 
 
+Number of unique occurences: _insert_
+Number of occurences added since last review: _insert_
+Number of occurences removed since last review: _insert_
 
 ### Geographic Context
 
-: Collections most represented by Country (up to 10 most frequent)
-| country | count
-| -- | -- 
+: Most represented Countries (up to 10 most frequent)
+| country | count |
+| -- | -- |
 
-: Collections most represented by State (up to 10 most frequent)
+: Most represented States (up to 10 most frequent)
 
 | stateProvince | count |
 | --- | --- |
 
-### Taxonomic Breadth
-: Most Frequently Mentioned Primary Taxa (up to 20 most frequent)
+### Taxonomic Context
 
-| targetTaxonName | count |
+Number of unique taxonNames: _insert_
+Number of taxonName added since last review: _insert_
+Number of taxonName removed since last review: _insert_ 
+
+: Most Frequently Mentioned taxonName (up to 20 most frequent)
+
+| scientificName | count |
 | --- | --- |
-| Fraxinus excelsior | 1631 |
-| Alnus glutinosa | 273 |
-| Quercus robur | 210 |
-| Tilia cordata | 201 |
-| Carpinus betulus | 163 |
-| Acer platanoides | 130 |
-| Populus tremula | 118 |
-| Corylus avellana | 104 |
-| Betula pendula | 103 |
-| Picea abies | 82 |
-| Sorbus aucuparia | 72 |
-| Ulmus glabra | 71 |
-| Fraxinus | 50 |
-| Crataegus monogyna | 49 |
-| Prunus spinosa | 49 |
-| Ulmus laevis | 45 |
-| Sambucus nigra | 36 |
-| Sylvia atricapilla | 36 |
-| Alnus incana | 35 |
-: Most Frequently Mentioned Associate Taxa (up to 20 most frequent)
 
-| sourceTaxonName | interactionTypeName | targetTaxonName | count |
-| --- | --- | --- | --- |
-| Turdus merula | eats | Crataegus monogyna | 5 |
-| Atethmia centrago | eats | Fraxinus excelsior | 4 |
-| Maniola jurtina | visitsFlowersOf | Centaurea jacea | 4 |
-| Turdus philomelos | eats | Crataegus monogyna | 4 |
-| Dendrocopos major | createsHabitatFor | Fraxinus excelsior | 4 |
-| Dendrocopos minor | eats | Lepidoptera | 4 |
-| Prays fraxinella | eats | Fraxinus excelsior | 3 |
-| Parmelia sulcata | epiphyteOf | Fraxinus excelsior | 3 |
-| Cladonia coniocraea | epiphyteOf | Fraxinus excelsior | 3 |
-| Lecanora carpinea | epiphyteOf | Fraxinus excelsior | 3 |
-| Buellia griseovirens | epiphyteOf | Fraxinus excelsior | 3 |
-| Lobaria pulmonaria | epiphyteOf | Fraxinus excelsior | 3 |
-| Acrocordia gemmata | epiphyteOf | Fraxinus excelsior | 3 |
-| Bacidia rubella | epiphyteOf | Fraxinus excelsior | 3 |
-| Arthonia radiata | epiphyteOf | Fraxinus excelsior | 3 |
-| Opegrapha rufescens | epiphyteOf | Fraxinus excelsior | 3 |
-| Pertusaria pertusa | epiphyteOf | Fraxinus excelsior | 3 |
-| Chrysothrix candelaris | epiphyteOf | Fraxinus excelsior | 3 |
-| Peltigera praetextata | epiphyteOf | Fraxinus excelsior | 3 |
-: Most Frequent Interactions between Primary and Associate Taxa (up to 20 most frequent)
+### Temporal Context
 
+Earliest eventDate: _insert_
+Latest eventDate: _insert_
 
-### Interaction Networks
+**note this requires splitting eventDate": "1989-07-12/1989-07-12**
 
-The figures below provide a graph view on the dataset under review. The first shows a summary network on the kingdom level, and the second shows how interactions on the family level. It is important to note that both network graphs were first aligned taxonomically using the Catalogue of Life. Please refer to the original (or verbatim) taxonomic names for a more original view on the interaction data.  
-
-![Interactions on taxonomic kingdom rank as interpreted by the Catalogue of Life [download svg](indexed-interactions-col-kingdom-col-kingdom.svg)](indexed-interactions-col-kingdom-col-kingdom.svg)
-
-![Interactions on the taxonomic family rank as interpreted by the Catalogue of Life. [download svg](indexed-interactions-col-family-col-family.svg)](indexed-interactions-col-family-col-family.svg)
+_Can we provide a last 12 months growth graph using previous reports?_
 
 You can download the indexed dataset under review at [indexed-interactions.csv.gz](indexed-interactions.csv.gz). A tab-separated file can be found at [indexed-interactions.tsv.gz](indexed-interactions.tsv.gz) 
 
-Learn more about the structure of this download at [GloBI website](https://globalbioticinteractions.org), by opening a [GitHub issue](https://github.com/globalbioticinteractions/globalbioticinteractions/issues/new), or by sending an [email](mailto:info@globalbioticinteractions.org).
+Learn more about the structure of this download at _insert_), by opening a [GitHub issue](_insert_).
 
-Another way to discover the dataset under review is by searching for it on the [GloBI website](https://www.globalbioticinteractions.org/?accordingTo=globi%3AAgentschapPlantentuinMeise%2FashForestInteractions).
-
-
-## Taxonomic Breadth
-
-As part of the review, all names are aligned against various name catalogs (e.g., col, ncbi, discoverlife, gbif, itis, wfo, mdd, tpt, pbdb, and worms). These alignments can help review name usage or aid in selecting of a suitable taxonomic name resource. 
-
-| providedName | relationName | resolvedCatalogName | resolvedName |
-| --- | --- | --- | --- |
-| Acalitus stenaspis | NONE | col | Acalitus stenaspis |
-| Aceria cephaloneus macrorhynchus | NONE | col | Aceria cephaloneus macrorhynchus |
-| Aceria erineus | NONE | col | Aceria erineus |
-| Aceria fagineus | NONE | col | Aceria fagineus | 
-: Sample of Name Alignments
-
-| resolvedCatalogName | resolvedRank | count |
-| --- | --- | --- |
-| col | NA | 373 |
-| col | class | 6 |
-| col | family | 48 |
-| col | genus | 201 |
-| col | gigaclass | 1 |
-| col | kingdom | 1 |
-| col | order | 16 |
-| col | phylum | 1 |
-| col | section | 1 |
-| col | species | 1835 |
-| col | subclass | 1 |
-| col | subfamily | 2 |
-| col | subgenus | 11 |
-| col | subspecies | 66 |
-| col | superfamily | 1 |
-| col | tribe | 2 |
-| col | variety | 7 |
-| discoverlife | NA | 2509 |
-| discoverlife | species | 2 |
-| gbif | NA | 139 |
-| gbif | class | 7 |
-| gbif | family | 50 |
-| gbif | form | 7 |
-| gbif | genus | 218 |
-| gbif | kingdom | 1 |
-| gbif | order | 16 |
-| gbif | phylum | 1 |
-| gbif | species | 2056 |
-| gbif | subspecies | 78 |
-| gbif | variety | 34 |
-| itis | NA | 1303 |
-| itis | class | 6 |
-| itis | family | 50 |
-| itis | genus | 168 |
-| itis | kingdom | 1 |
-| itis | order | 16 |
-| itis | phylum | 1 |
-| itis | species | 945 |
-| itis | subclass | 1 |
-| itis | subfamily | 1 |
-| itis | suborder | 3 |
-| itis | subspecies | 9 |
-| itis | superclass | 1 |
-| itis | superfamily | 1 |
-| itis | superorder | 1 |
-| itis | variety | 4 |
-| mdd | NA | 2511 |
-| ncbi | NA | 452 |
-| ncbi | class | 7 |
-| ncbi | family | 50 |
-| ncbi | genus | 200 |
-| ncbi | kingdom | 1 |
-| ncbi | order | 16 |
-| ncbi | phylum | 1 |
-| ncbi | species | 1768 |
-| ncbi | subfamily | 2 |
-| ncbi | subgenus | 5 |
-| ncbi | suborder | 2 |
-| ncbi | subspecies | 7 |
-| ncbi | superclass | 1 |
-| ncbi | superfamily | 1 |
-| ncbi | superorder | 1 |
-| ncbi | tribe | 1 |
-| ncbi | varietas | 1 |
-| pbdb | NA | 2124 |
-| pbdb | class | 7 |
-| pbdb | family | 50 |
-| pbdb | genus | 118 |
-| pbdb | infraorder | 1 |
-| pbdb | kingdom | 1 |
-| pbdb | order | 18 |
-| pbdb | phylum | 1 |
-| pbdb | species | 185 |
-| pbdb | subclass | 1 |
-| pbdb | subfamily | 3 |
-| pbdb | suborder | 2 |
-| pbdb | superclass | 1 |
-| pbdb | superfamily | 1 |
-| pbdb | superorder | 1 |
-| pbdb | tribe | 1 |
-| pbdb | unranked clade | 3 |
-| tpt | NA | 2286 |
-| tpt | family | 4 |
-| tpt | genus | 24 |
-| tpt | order | 2 |
-| tpt | species | 195 |
-| wfo | NA | 1873 |
-| wfo | family | 5 |
-| wfo | genus | 83 |
-| wfo | species | 539 |
-| wfo | subspecies | 18 |
-| wfo | variety | 4 |
-| worms | NA | 1924 |
-| worms | class | 6 |
-| worms | family | 44 |
-| worms | genus | 118 |
-| worms | gigaclass | 1 |
-| worms | kingdom | 1 |
-| worms | order | 16 |
-| worms | phylum | 1 |
-| worms | species | 396 |
-| worms | subclass | 1 |
-| worms | suborder | 2 |
-| worms | subspecies | 6 |
-| worms | variety | 1 |
-: Distribution of Taxonomic Ranks of Aligned Names by Catalog. Names that were not aligned with a catalog are counted as NAs. So, the total number of unaligned names for a catalog will be listed in their NA row. 
+Another way to discover the dataset under review is by searching for it on the [_insert_](_insert_).
 
 
-| resolvedCatalogName | relationName | count |
-| --- | --- | --- |
-| col | NONE | 420 |
-| col | SYNONYM_OF | 863 |
-| col | HAS_ACCEPTED_NAME | 2422 |
-| discoverlife | NONE | 3159 |
-| discoverlife | HAS_ACCEPTED_NAME | 2 |
-| gbif | HAS_ACCEPTED_NAME | 3219 |
-| gbif | NONE | 145 |
-| gbif | SYNONYM_OF | 1385 |
-| itis | NONE | 1568 |
-| itis | HAS_ACCEPTED_NAME | 1493 |
-| itis | SYNONYM_OF | 132 |
-| mdd | NONE | 3082 |
-| mdd | HAS_ACCEPTED_NAME | 77 |
-| mdd | SYNONYM_OF | 2 |
-| ncbi | NONE | 504 |
-| ncbi | SYNONYM_OF | 246 |
-| ncbi | SAME_AS | 2424 |
-| ncbi | COMMON_NAME_OF | 1 |
-| pbdb | NONE | 2668 |
-| pbdb | HAS_ACCEPTED_NAME | 487 |
-| pbdb | SYNONYM_OF | 49 |
-| tpt | SYNONYM_OF | 40 |
-| tpt | HAS_ACCEPTED_NAME | 308 |
-| tpt | NONE | 2887 |
-| wfo | NONE | 2341 |
-| wfo | SYNONYM_OF | 163 |
-| wfo | HAS_ACCEPTED_NAME | 774 |
-| wfo | HAS_UNCHECKED_NAME | 220 |
-| worms | NONE | 2418 |
-| worms | HAS_ACCEPTED_NAME | 740 |
-| worms | SYNONYM_OF | 55 |
-: Name relationship types per catalog. Name relationship type "NONE" means that a name was not recognized by the associated catalog. "SAME_AS" indicates either a "HAS_ACCEPTED_NAME" or "SYNONYM_OF" name relationship type. We recognize that "SYNONYM_OF" encompasses many types of nomenclatural synonymies [@ICZN_1999] (e.g., junior synonym, senior synonyms). 
 
-| catalog name | alignment results |
-| --- | --- |
-| col | associated names alignments report in gzipped [html](indexed-names-resolved-col.html.gz), [csv](indexed-names-resolved-col.csv.gz), and [tsv](indexed-names-resolved-col.tsv.gz)) |
-| ncbi | associated names alignments report in gzipped [html](indexed-names-resolved-ncbi.html.gz), [csv](indexed-names-resolved-ncbi.csv.gz), and [tsv](indexed-names-resolved-ncbi.tsv.gz)) |
-| discoverlife | associated names alignments report in gzipped [html](indexed-names-resolved-discoverlife.html.gz), [csv](indexed-names-resolved-discoverlife.csv.gz), and [tsv](indexed-names-resolved-discoverlife.tsv.gz)) |
-| gbif | associated names alignments report in gzipped [html](indexed-names-resolved-gbif.html.gz), [csv](indexed-names-resolved-gbif.csv.gz), and [tsv](indexed-names-resolved-gbif.tsv.gz)) |
-| itis | associated names alignments report in gzipped [html](indexed-names-resolved-itis.html.gz), [csv](indexed-names-resolved-itis.csv.gz), and [tsv](indexed-names-resolved-itis.tsv.gz)) |
-| wfo | associated names alignments report in gzipped [html](indexed-names-resolved-wfo.html.gz), [csv](indexed-names-resolved-wfo.csv.gz), and [tsv](indexed-names-resolved-wfo.tsv.gz)) |
-| mdd | associated names alignments report in gzipped [html](indexed-names-resolved-mdd.html.gz), [csv](indexed-names-resolved-mdd.csv.gz), and [tsv](indexed-names-resolved-mdd.tsv.gz)) |
-| tpt | associated names alignments report in gzipped [html](indexed-names-resolved-tpt.html.gz), [csv](indexed-names-resolved-tpt.csv.gz), and [tsv](indexed-names-resolved-tpt.tsv.gz)) |
-| pbdb | associated names alignments report in gzipped [html](indexed-names-resolved-pbdb.html.gz), [csv](indexed-names-resolved-pbdb.csv.gz), and [tsv](indexed-names-resolved-pbdb.tsv.gz)) |
-| worms | associated names alignments report in gzipped [html](indexed-names-resolved-worms.html.gz), [csv](indexed-names-resolved-worms.csv.gz), and [tsv](indexed-names-resolved-worms.tsv.gz)) | 
 : List of Available Name Alignment Reports
 
 ## Additional Reviews
