@@ -220,9 +220,9 @@ If you'd like to keep track of reviews or index status of the dataset under revi
 
 This review and archive provides a means of creating a citable version of a dataset that changes frequently. This may be useful for dataset managers, including natural history collection data managers, as a backup archive of a shared Darwin Core archive. It also serves as a means of creating a trackable citation for the dataset in an automated way, while also including some information about the contents of the dataset.
 
-This review aims to provide a perspective on the dataset to aid in understanding digitization progress and data quality management. However, it is important to note that this review does *not* assess the quality of the dataset. Instead, it serves as an indication of the open-ness[^2] and FAIRness [@Wilkinson_2016; @trekels_maarten_2023_8176978] of the dataset: to perform this review, the data was likely openly available, **F**indable, **A**ccessible, **I**nteroperable and **R**eusable. The current Open-FAIR assessment is qualitative, and a more quantitative approach can be implemented with specified measurement units. 
+This review aims to provide a perspective on the dataset to aid in understanding digitization progress and data quality management. However, it is important to note that this review does *not* assess the quality of the dataset. Instead, it serves as an indication of the open-ness[^2] and FAIRness[^10] of the dataset: to perform this review, the data was likely openly available, **F**indable, **A**ccessible, **I**nteroperable and **R**eusable. The current Open-FAIR assessment is qualitative, and a more quantitative approach can be implemented with specified measurement units. 
 
-This report also showcases the reuse of machine-actionable (meta)data, something highly recommended by the FAIR Data Principles [@Wilkinson_2016]. Making (meta)data machine-actionable enables more precise procesing by computers, enabling even naive review bots like Nomer and Elton to interpret the data effectively. This capability is crucial for not just automating the generation of reports, but also for facilitating seamless data exchanges, promoting interoperability. 
+This report also showcases the reuse of machine-actionable (meta)data, something highly recommended by the FAIR Data Principles[^10]. Making (meta)data machine-actionable enables more precise procesing by computers, enabling even naive review bots like Nomer and Elton to interpret the data effectively. This capability is crucial for not just automating the generation of reports, but also for facilitating seamless data exchanges, promoting interoperability. 
 
 # Acknowledgements
 
@@ -254,3 +254,4 @@ _the first two are sorta references, but also not - I think we should clean them
 [^7]: What SPNHC does. The Society for the Preservation of Natural History Collections. (2025). https://spnhc.org/what-spnhc-does/ 
 [^8]: Global Biodiversity Information Facility. (n.d.). IPT. https://www.gbif.org/ipt 
 [^9]: Global Biodiversity Information Facility. (n.d.). Darwin Core Archives – How-To Guide. Darwin Core Archives – How-to Guide :: GBIF IPT User Manual. https://ipt.gbif.org/manual/en/ipt/latest/dwca-guide#what-is-darwin-core-archive-dwc-a 
+[^10]: @Wilkinson_2016; @trekels_maarten_2023_8176978
