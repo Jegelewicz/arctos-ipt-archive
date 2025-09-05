@@ -198,7 +198,7 @@ In addition, you can find the most frequently occurring notes in the table below
 
 For additional information on review notes, please have a look at the first 500 [Review Notes](review-sample.html) in html format or the download full gzipped [csv](review.csv.gz) or [tsv](review.tsv.gz) archives.
 
-_do we need any of the GloBI stuuf?_
+_do we need any of the GloBI stuff?_
 ## GloBI Review Badge
 
 As part of the review, a review badge is generated. This review badge can be included in webpages to indicate the review status of the dataset under review. 
