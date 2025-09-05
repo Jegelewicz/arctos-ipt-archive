@@ -20,7 +20,7 @@ reference-section-title: References
 
 # Introduction
 
-
+Natural history collections are part of our global heritage and a priceless resource for research and education. (https://spnhc.org/what-spnhc-does/)  Information about the contents of Natural History Collections may be captured in datasets and published digitally via the Global Biodiversity Information Facility (GBIF) Integrated Publishing Toolkit (IPT) (https://www.gbif.org/ipt) as Darwin Core Archives (DwC-A) (https://ipt.gbif.org/manual/en/ipt/latest/dwca-guide#what-is-darwin-core-archive-dwc-a). We present a review and archiving process for such an openly accessible digital dataset of known origin and discuss its outcome. The dataset under review is named _insert_, has fingerprint _insert_, and is _insert_ in size.
 
 ## Data Review and Archive
 
@@ -30,20 +30,19 @@ This review includes summary statistics about, and observations about, the datas
 
 > _insert_ 
 
-For additional metadata related to this dataset, please visit [https://github.com/AgentschapPlantentuinMeise/ashForestInteractions](https://github.com/AgentschapPlantentuinMeise/ashForestInteractions) and inspect associated metadata files including, but not limited to, _README.md_, _eml.xml_, and/or _globi.json_.
+For additional metadata related to this dataset, please visit [https://github.com/AgentschapPlantentuinMeise/ashForestInteractions](https://github.com/AgentschapPlantentuinMeise/ashForestInteractions) and inspect associated metadata files including, but not limited to, _README.md_, _eml.xml_, and/or _globi.json_. _should this really just be a link to the GBIF metadata?_
 
 _Possible to get the Latimer Core required terms from the metadata? - https://ltc.tdwg.org/quick-reference/_
 
 # Methods
 
-The review is performed through programmatic scripts that leverage tools like Preston [@Preston], Elton [@Elton], Nomer [@Nomer], globinizer [@globinizer] combined with third-party tools like grep, mlr, tail and head.
+The review is performed through programmatic scripts that leverage tools like Preston [@Preston], Elton [@Elton], Nomer [@Nomer], combined with third-party tools like grep, mlr, tail and head.
 
  | tool name | version | 
  | --- | --- | 
  | [preston](https://github.com/bio-guoda/preston) | 0.10.1 |  
  | [elton](https://github.com/globalbioticinteractions/elton) | 0.15.13 | 
  | [nomer](https://github.com/globalbioticinteractions/nomer) | 0.5.17 |  
- | [globinizer](https://github.com/globalbioticinteractions/globinizer) | 0.4.0 |  
  | [mlr](https://miller.readthedocs.io/en/6.8.0/) | 6.0.0 |  
  | [jq](https://jqlang.org/) | 1.6 |  
  | [yq](https://mikefarah.gitbook.io/yq) | 4.25.3 |  
@@ -110,7 +109,7 @@ Note that [_data.zip_](data.zip) file in this archive contains the complete, unm
 
 ![Biotic Interaction Data Model](interaction.svg)
 
-In this review, collection statistics are modeled as Darwin Core values. In addition, metadata provided by the collection is reviewed for compliance with the Latimer Core Standard for describing collections (https://github.com/tdwg/ltc/wiki/1.-Overview-of-Latimer-Core). "Latimer Core has been developed to fill this gap: it is designed to be a flexible, sustainable framework of terms that can be assembled to create records that accurately represent a grouping of objects at any level of granularity, from an entire collection of an institution to a few objects in a single drawer." 
+In this review, collection statistics are modeled as Darwin Core[^4] values. In addition, metadata provided by the collection is reviewed for compliance with the Latimer Core Standard[^5] for describing collections. "Latimer Core has been developed to fill this gap: it is designed to be a flexible, sustainable framework of terms that can be assembled to create records that accurately represent a grouping of objects at any level of granularity, from an entire collection of an institution to a few objects in a single drawer."[^5] 
 
 The dataset under review, named _insert_, is _insert_ in size and contains _insert occurence records with _insert_ unique taxon names (e.g., Fraxinus excelsior).
 
@@ -123,6 +122,8 @@ The exhaustive list was used to create the following data summaries below.
 Number of unique occurences: _insert_
 Number of occurences added since last review: _insert_
 Number of occurences removed since last review: _insert_
+
+_Can we provide a last 12 months growth graph using previous reports? wish list - maybe once we have confirmed this is a good idea_
 
 ### Taxonomic Context
 
@@ -148,19 +149,27 @@ Number of taxonName removed since last review: _insert_
 
 ### Temporal Context
 
-Earliest eventDate: _insert_
-Latest eventDate: _insert_
+Earliest eventDate: _insert_ 
+Latest eventDate: _insert_ 
 
-**note this requires splitting eventDate": "1989-07-12/1989-07-12**
+**note this requires splitting eventDate": "1989-07-12/1989-07-12** 
 
-_Can we provide a last 12 months growth graph using previous reports?_
+### Geologic Context 
 
-### Geologic Context
+earliestEonOrLowestEonothem: _insert_ 
+latestEonOrLowestEonothem: _insert_ 
 
-earliestEonOrLowestEonothem: _insert_
-earliestPeriodOrLowestSystem: _insert_
-earliestEpochOrLowestSeries: _insert_
+earliestEraOrLowestErathem: _insert_ 
+latestEraOrLowestErathem: _insert_ 
 
+earliestPeriodOrLowestSystem: _insert_ 
+latestPeriodOrLowestSystem: _insert_ 
+
+earliestEpochOrLowestSeries: _insert_ 
+latestEpochOrLowestSeries: _insert_ 
+
+earliestAgeOrLowestStage: _insert_ 
+latestAgeOrLowestStage: _insert_ 
 
 You can download the indexed dataset under review at [indexed-interactions.csv.gz](indexed-interactions.csv.gz). A tab-separated file can be found at [indexed-interactions.tsv.gz](indexed-interactions.tsv.gz) 
 
@@ -233,3 +242,6 @@ Nomer was responsible for name alignments. Elton carried out dataset extraction,
 
 [^1]: Disclaimer: The results in this review should be considered friendly, yet naive, notes from an unsophisticated robot. Please keep that in mind when considering the review results. 
 [^2]: According to http://opendefinition.org/: "Open data is data that can be freely used, re-used and redistributed by anyone - subject only, at most, to the requirement to attribute and sharealike."
+[^3]: Bradley J (2025). UWBM Mammalogy Collection (Arctos). University of Washington Burke Museum. Occurrence dataset https://doi.org/10.15468/qziy3w accessed via GBIF.org on 2025-09-05. _from GBIF API_
+[^4]: Darwin Core Maintenance Group. 2021. Darwin Core Quick Reference Guide. Biodiversity Information Standards (TDWG). https://dwc.tdwg.org/terms/
+[^5]: https://ltc.tdwg.org/
