@@ -41,6 +41,7 @@ _Possible to get the Latimer Core required terms from the metadata? - https://lt
 
 The review is performed through programmatic scripts that leverage tools like Preston [@Preston], Elton [@Elton], Nomer [@Nomer], combined with third-party tools like grep, mlr, tail and head. 
 
+## Tools used in this review process
  | tool name | version | 
  | --- | --- | 
  | [preston](https://github.com/bio-guoda/preston) | 0.10.1 |  
@@ -51,7 +52,6 @@ The review is performed through programmatic scripts that leverage tools like Pr
  | [yq](https://mikefarah.gitbook.io/yq) | 4.25.3 |  
  | [pandoc](https://pandoc.org/) | 3.1.6.1 |  
  | [duckdb](https://duckdb.org/) | 1.3.1 |  
-: Tools used in this review process
 
 The review process can be described in the form of the script below ^[Note that you have to first get the data (e.g., via elton pull AgentschapPlantentuinMeise/ashForestInteractions) before being able to generate reviews (e.g., elton review AgentschapPlantentuinMeise/ashForestInteractions), extract interaction claims (e.g., elton interactions AgentschapPlantentuinMeise/ashForestInteractions), or list taxonomic names (e.g., elton names AgentschapPlantentuinMeise/ashForestInteractions)]. 
 
