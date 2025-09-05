@@ -1,7 +1,7 @@
 ---
 title: Versioned Archive and Review of Collection Statistics found within _insert_ 
 author: 
-  - _insert Administrative point of contact_; _insert Administrative point of contact address_; _insert Administrative point of contact email_ 
+  - _insert Administrative point of contact_; _insert Administrative point of contact address_; _insert Administrative point of contact email_[^11] 
   - Mayfield-Meyer, Teresa J.; Albuquerque, New Mexico, USA; jegelewicz66@yahoo.com
   - Poelen, Jorrit; Minneapolis, Minnesota, USA; jhpoelen@jhpoelen.nl
   - Nomer, Elton and Preston, three naive review bots; review@globalbioticinteractions.org; https://globalbioticinteractions.org/contribute; https://github.com/AgentschapPlantentuinMeise/ashForestInteractions/issues
@@ -230,12 +230,7 @@ We thank the many humans that created us and those who created and maintained th
 
 # Author contributions
 
-(GBIF Administrative Contact contact details as provided to GBIF. _get from GBIF API - https://www.gbif.org/dataset/830eb5d0-f762-11e1-a439-00145eb45e9a#contacts) provided the original data reviewed in this report.
-
-Administrative point of contact: _insert_
-Administrative point of contact email: _insert_ 
-
-via VertNet IPT[^6]
+_GBIF Administrative Contact contact details as provided to GBIF. _get from GBIF API - https://www.gbif.org/dataset/830eb5d0-f762-11e1-a439-00145eb45e9a#contacts: Administrative point of contact insert_ provided the original data reviewed in this report.
 
 Nomer was responsible for name alignments. Elton carried out dataset extraction, and generated the review notes. Preston tracked, versioned, and packaged, the dataset under review.
 
@@ -254,4 +249,5 @@ _the first two are sorta references, but also not - I think we should clean them
 [^7]: What SPNHC does. The Society for the Preservation of Natural History Collections. (2025). https://spnhc.org/what-spnhc-does/ 
 [^8]: Global Biodiversity Information Facility. (n.d.). IPT. https://www.gbif.org/ipt 
 [^9]: Global Biodiversity Information Facility. (n.d.). Darwin Core Archives – How-To Guide. Darwin Core Archives – How-to Guide :: GBIF IPT User Manual. https://ipt.gbif.org/manual/en/ipt/latest/dwca-guide#what-is-darwin-core-archive-dwc-a 
-[^10]: @Wilkinson_2016; @trekels_maarten_2023_8176978
+[^10]: @Wilkinson_2016; @trekels_maarten_2023_8176978 
+[^11]: _insert GBIF dataset publisher. Metadata last modified. website title. website address._  
