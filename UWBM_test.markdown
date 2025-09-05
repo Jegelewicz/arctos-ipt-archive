@@ -6,7 +6,7 @@ author:
   - https://globalbioticinteractions.org/contribute 
   - https://github.com/AgentschapPlantentuinMeise/ashForestInteractions/issues  
 abstract: |
-  Natural history collections are part of our global heritage and a priceless resource for research and education. (https://spnhc.org/what-spnhc-does/)  Information about the contents of Natural History Collections may be captured in datasets and published digitally via the Global Biodiversity Information Facility (GBIF) Integrated Publishing Toolkit (IPT) (https://www.gbif.org/ipt) as Darwin Core Archives (DwC-A) (https://ipt.gbif.org/manual/en/ipt/latest/dwca-guide#what-is-darwin-core-archive-dwc-a). We present a review and archiving process for such an openly accessible digital dataset of known origin and discuss its outcome. The dataset under review, named _insert_, has fingerprint _insert_, is _insert_ in size and contains _insert_ occurences with _insert_ unique taxon names. This report includes summaries of collection statistics, taxonomic context, geographic context, temporal context, geologic context, and an archived version of the dataset from which the reviews are derived. 
+  Natural history collections are part of our global heritage and a priceless resource for research and education. Information about the contents of Natural History Collections may be captured in datasets and published digitally via the Global Biodiversity Information Facility (GBIF) Integrated Publishing Toolkit (IPT)[^8] as Darwin Core Archives (DwC-A)[^9]. We present a review and archiving process for such an openly accessible digital dataset of known origin and discuss its outcome. The dataset under review, named _insert_, has fingerprint _insert_, is _insert_ in size and contains _insert_ occurences with _insert_ unique taxon names. This report includes summaries of collection statistics, taxonomic context, geographic context, temporal context, geologic context, and an archived version of the dataset from which the reviews are derived. 
 
 bibliography: biblio.bib 
 keywords: 
@@ -20,7 +20,7 @@ reference-section-title: References
 
 # Introduction 
 
-Natural history collections are part of our global heritage and a priceless resource for research and education. (https://spnhc.org/what-spnhc-does/)  Information about the contents of Natural History Collections may be captured in datasets and published digitally via the Global Biodiversity Information Facility (GBIF) Integrated Publishing Toolkit (IPT) (https://www.gbif.org/ipt) as Darwin Core Archives (DwC-A) (https://ipt.gbif.org/manual/en/ipt/latest/dwca-guide#what-is-darwin-core-archive-dwc-a). We present a review and archiving process for such an openly accessible digital dataset of known origin and discuss its outcome. The dataset under review is named _insert_, has fingerprint _insert_, and is _insert_ in size. 
+"Natural history collections are part of our global heritage and a priceless resource for research and education."[^7] Information about the contents of Natural History Collections may be captured in datasets and published digitally via the Global Biodiversity Information Facility (GBIF) Integrated Publishing Toolkit (IPT)[^8] as Darwin Core Archives (DwC-A)[^9]. We present a review and archiving process for such an openly accessible digital dataset of known origin and discuss its outcome. The dataset under review is named _insert_, has fingerprint _insert_, and is _insert_ in size. 
 
 ## Data Review and Archive 
 
@@ -71,41 +71,7 @@ You can find a copy of the full review script at [_insert_]. See also [GitHub](_
 
 In the following sections, the results of the review are summarized [^1]. Then, links to the detailed review reports are provided. 
 
-## Files
-
-The following files are produced in this review: 
-
- filename | description
- --- | ---  
- [biblio.bib](biblio.bib) | list of bibliographic reference of this review 
- [check-dataset.sh](check-dataset.sh) | data review workflow/process as expressed in a bash script
- [data.zip](data.zip) | a versioned archive of the data under review
- [HEAD](HEAD) | the digital signature of the data under review
- [index.docx](index.docx) | review in MS Word format 
- [index.html](index.html) | review in HTML format 
- [index.md](index.md) |  review in Pandoc markdown format
- [index.pdf](index.pdf) | review in PDF format
- [indexed-citations.csv.gz](indexed-citations.csv.gz) | list of distinct reference citations for reviewed species interaction claims in gzipped comma-separated values file format 
- [indexed-citations.html.gz](indexed-citations.html.gz) | list of distinct reference citations for reviewed species interactions claims in gzipped html file format
- [indexed-citations.tsv.gz](indexed-citations.tsv.gz) | list of distinct reference citations for reviewed species interaction claims in gzipped tab-separated values format
- [nanopub-sample.trig](nanopub-sample.trig) | first 500 species interaction claims as expressed in the nanopub format [@Nanopub]
- [nanopub.trig.gz](nanopub.trig.gz) | species interaction claims as expressed in the nanopub format [@Nanopub]
- [process.svg](process.svg) | diagram summarizing the data review processing workflow 
- [prov.nq](prov.nq) | origin of the dataset under review as expressed in rdf/nquads 
- [review.csv.gz](review.csv.gz) | review notes associated with the dataset under review in gzipped comma-separated values format 
- [review.html.gz](review.html.gz) | review notes associated with the dataset under review in gzipped html format
- [review.tsv.gz](review.tsv.gz) | review notes associated with the dataset under review in gzipped tab-separated values format
- [review-sample.csv](review-sample.csv) | first 500 review notes associated with the dataset under review in comma-separated values format
- [review-sample.html](review-sample.html) | first 500 review notes associated with the dataset under review in html format
- [review-sample.tsv](review-sample.tsv) | first 500 review notes associated with the dataset under review in tab-separated values format
- [review.svg](review.svg) | a review badge generated as part of the dataset review process
- [zenodo.json](zenodo.json) | metadata of this review expressed in Zenodo record metadata
-
-## Archived Dataset
-
-Note that [_data.zip_](data.zip) file in this archive contains the complete, unmodified archived dataset under review. 
-
-## Collection Statistics 
+## Review Summary 
 
 ![Biotic Interaction Data Model](interaction.svg) 
 
@@ -171,6 +137,40 @@ latestEpochOrLowestSeries: _insert_
 earliestAgeOrLowestStage: _insert_ 
 latestAgeOrLowestStage: _insert_ 
 
+## Files
+
+The following files are produced in this review: 
+
+ filename | description
+ --- | ---  
+ [biblio.bib](biblio.bib) | list of bibliographic reference of this review 
+ [check-dataset.sh](check-dataset.sh) | data review workflow/process as expressed in a bash script
+ [data.zip](data.zip) | a versioned archive of the data under review
+ [HEAD](HEAD) | the digital signature of the data under review
+ [index.docx](index.docx) | review in MS Word format 
+ [index.html](index.html) | review in HTML format 
+ [index.md](index.md) |  review in Pandoc markdown format
+ [index.pdf](index.pdf) | review in PDF format
+ [indexed-citations.csv.gz](indexed-citations.csv.gz) | list of distinct reference citations for reviewed species interaction claims in gzipped comma-separated values file format 
+ [indexed-citations.html.gz](indexed-citations.html.gz) | list of distinct reference citations for reviewed species interactions claims in gzipped html file format
+ [indexed-citations.tsv.gz](indexed-citations.tsv.gz) | list of distinct reference citations for reviewed species interaction claims in gzipped tab-separated values format
+ [nanopub-sample.trig](nanopub-sample.trig) | first 500 species interaction claims as expressed in the nanopub format [@Nanopub]
+ [nanopub.trig.gz](nanopub.trig.gz) | species interaction claims as expressed in the nanopub format [@Nanopub]
+ [process.svg](process.svg) | diagram summarizing the data review processing workflow 
+ [prov.nq](prov.nq) | origin of the dataset under review as expressed in rdf/nquads 
+ [review.csv.gz](review.csv.gz) | review notes associated with the dataset under review in gzipped comma-separated values format 
+ [review.html.gz](review.html.gz) | review notes associated with the dataset under review in gzipped html format
+ [review.tsv.gz](review.tsv.gz) | review notes associated with the dataset under review in gzipped tab-separated values format
+ [review-sample.csv](review-sample.csv) | first 500 review notes associated with the dataset under review in comma-separated values format
+ [review-sample.html](review-sample.html) | first 500 review notes associated with the dataset under review in html format
+ [review-sample.tsv](review-sample.tsv) | first 500 review notes associated with the dataset under review in tab-separated values format
+ [review.svg](review.svg) | a review badge generated as part of the dataset review process
+ [zenodo.json](zenodo.json) | metadata of this review expressed in Zenodo record metadata
+
+## Archived Dataset
+
+Note that [_data.zip_](data.zip) file in this archive contains the complete, unmodified archived dataset under review. 
+
 You can download the indexed dataset under review at [indexed-interactions.csv.gz](indexed-interactions.csv.gz). A tab-separated file can be found at [indexed-interactions.tsv.gz](indexed-interactions.tsv.gz) 
 
 Learn more about the structure of this download at _insert_), by opening a [GitHub issue](_insert_).
@@ -223,7 +223,7 @@ If you'd like to keep track of reviews or index status of the dataset under revi
 
 This review and archive provides a means of creating a citable version of a dataset that changes frequently. This may be useful for dataset managers, including natural history collection data managers, as a backup archive of a shared Darwin Core archive. It also serves as a means of creating a trackable citation for the dataset in an automated way, while also including some information about the contents of the dataset.
 
-This review aims to provide a perspective on the dataset to aid in understanding of digitization progress and data quality management. However, it is important to note that this review does *not* assess the quality of the dataset. Instead, it serves as an indication of the open-ness[^2] and FAIRness [@Wilkinson_2016; @trekels_maarten_2023_8176978] of the dataset: to perform this review, the data was likely openly available, **F**indable, **A**ccessible, **I**nteroperable and **R**eusable. The current Open-FAIR assessment is qualitative, and a more quantitative approach can be implemented with specified measurement units. 
+This review aims to provide a perspective on the dataset to aid in understanding digitization progress and data quality management. However, it is important to note that this review does *not* assess the quality of the dataset. Instead, it serves as an indication of the open-ness[^2] and FAIRness [@Wilkinson_2016; @trekels_maarten_2023_8176978] of the dataset: to perform this review, the data was likely openly available, **F**indable, **A**ccessible, **I**nteroperable and **R**eusable. The current Open-FAIR assessment is qualitative, and a more quantitative approach can be implemented with specified measurement units. 
 
 This report also showcases the reuse of machine-actionable (meta)data, something highly recommended by the FAIR Data Principles [@Wilkinson_2016]. Making (meta)data machine-actionable enables more precise procesing by computers, enabling even naive review bots like Nomer and Elton to interpret the data effectively. This capability is crucial for not just automating the generation of reports, but also for facilitating seamless data exchanges, promoting interoperability. 
 
@@ -242,10 +242,15 @@ via VertNet IPT[^6]
 
 Nomer was responsible for name alignments. Elton carried out dataset extraction, and generated the review notes. Preston tracked, versioned, and packaged, the dataset under review.
 
-# References
+_these are sorta references, but also not - I think we should clean them up_
 [^1]: Disclaimer: The results in this review should be considered friendly, yet naive, notes from an unsophisticated robot. Please keep that in mind when considering the review results. 
 [^2]: According to http://opendefinition.org/: "Open data is data that can be freely used, re-used and redistributed by anyone - subject only, at most, to the requirement to attribute and sharealike."
+
+# References
 [^3]: Bradley J (2025). UWBM Mammalogy Collection (Arctos). University of Washington Burke Museum. Occurrence dataset https://doi.org/10.15468/qziy3w accessed via GBIF.org on 2025-09-05. _from GBIF API_
 [^4]: Darwin Core Maintenance Group. 2021. Darwin Core Quick Reference Guide. Biodiversity Information Standards (TDWG). https://dwc.tdwg.org/terms/
-[^5]: https://ltc.tdwg.org/
-[^6]: https://www.vertnet.org/share/ipt/
+[^5]: Biodiversity Information Standards (TDWG). (n.d.). Latimer Core Documentation. Latimer Core. https://ltc.tdwg.org/ 
+[^6]: The VertNet IPT. VertNet. (2025). https://www.vertnet.org/share/ipt/ 
+[^7]: What SPNHC does. The Society for the Preservation of Natural History Collections. (2025). https://spnhc.org/what-spnhc-does/ 
+[^8]: Global Biodiversity Information Facility. (n.d.). IPT. https://www.gbif.org/ipt 
+[^9]: Global Biodiversity Information Facility. (n.d.). Darwin Core Archives – How-To Guide. Darwin Core Archives – How-to Guide :: GBIF IPT User Manual. https://ipt.gbif.org/manual/en/ipt/latest/dwca-guide#what-is-darwin-core-archive-dwc-a 
