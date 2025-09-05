@@ -1,42 +1,42 @@
 ---
-title: Versioned Archive and Review of Collection Statistics found within _insert_
+title: Versioned Archive and Review of Collection Statistics found within _insert_ 
 author: 
-  - by Nomer, Elton and Preston, three naive review bots
-  - review@globalbioticinteractions.org
+  - by Nomer, Elton and Preston, three naive review bots 
+  - review@globalbioticinteractions.org 
   - https://globalbioticinteractions.org/contribute 
-  - https://github.com/AgentschapPlantentuinMeise/ashForestInteractions/issues 
+  - https://github.com/AgentschapPlantentuinMeise/ashForestInteractions/issues  
 abstract: |
-  Natural history collections are part of our global heritage and a priceless resource for research and education. (https://spnhc.org/what-spnhc-does/)  Information about the contents of Natural History Collections may be captured in datasets and published digitally via the Global Biodiversity Information Facility (GBIF) Integrated Publishing Toolkit (IPT) (https://www.gbif.org/ipt) as Darwin Core Archives (DwC-A) (https://ipt.gbif.org/manual/en/ipt/latest/dwca-guide#what-is-darwin-core-archive-dwc-a). We present a review and archiving process for such an openly accessible digital dataset of known origin and discuss its outcome. The dataset under review, named _insert_, has fingerprint _insert_, is _insert_ in size and contains _insert_ occurences with _insert_ unique taxon names. This report includes summaries of collection statistics, taxonomic context, geographic context, temporal context, geologic context, and an archived version of the dataset from which the reviews are derived.
+  Natural history collections are part of our global heritage and a priceless resource for research and education. (https://spnhc.org/what-spnhc-does/)  Information about the contents of Natural History Collections may be captured in datasets and published digitally via the Global Biodiversity Information Facility (GBIF) Integrated Publishing Toolkit (IPT) (https://www.gbif.org/ipt) as Darwin Core Archives (DwC-A) (https://ipt.gbif.org/manual/en/ipt/latest/dwca-guide#what-is-darwin-core-archive-dwc-a). We present a review and archiving process for such an openly accessible digital dataset of known origin and discuss its outcome. The dataset under review, named _insert_, has fingerprint _insert_, is _insert_ in size and contains _insert_ occurences with _insert_ unique taxon names. This report includes summaries of collection statistics, taxonomic context, geographic context, temporal context, geologic context, and an archived version of the dataset from which the reviews are derived. 
 
-bibliography: biblio.bib
-keywords:
-  - biodiversity informatics
-  - museum collections
-  - automated manuscripts
-  - taxonomic names
-  - biology
-reference-section-title: References
+bibliography: biblio.bib 
+keywords: 
+  - biodiversity informatics 
+  - museum collections 
+  - automated manuscripts 
+  - taxonomic names 
+  - biology 
+reference-section-title: References 
 ---
 
-# Introduction
+# Introduction 
 
-Natural history collections are part of our global heritage and a priceless resource for research and education. (https://spnhc.org/what-spnhc-does/)  Information about the contents of Natural History Collections may be captured in datasets and published digitally via the Global Biodiversity Information Facility (GBIF) Integrated Publishing Toolkit (IPT) (https://www.gbif.org/ipt) as Darwin Core Archives (DwC-A) (https://ipt.gbif.org/manual/en/ipt/latest/dwca-guide#what-is-darwin-core-archive-dwc-a). We present a review and archiving process for such an openly accessible digital dataset of known origin and discuss its outcome. The dataset under review is named _insert_, has fingerprint _insert_, and is _insert_ in size.
+Natural history collections are part of our global heritage and a priceless resource for research and education. (https://spnhc.org/what-spnhc-does/)  Information about the contents of Natural History Collections may be captured in datasets and published digitally via the Global Biodiversity Information Facility (GBIF) Integrated Publishing Toolkit (IPT) (https://www.gbif.org/ipt) as Darwin Core Archives (DwC-A) (https://ipt.gbif.org/manual/en/ipt/latest/dwca-guide#what-is-darwin-core-archive-dwc-a). We present a review and archiving process for such an openly accessible digital dataset of known origin and discuss its outcome. The dataset under review is named _insert_, has fingerprint _insert_, and is _insert_ in size. 
 
-## Data Review and Archive
+## Data Review and Archive 
 
-Data review and archiving can be a time-consuming process, especially when done manually. This review report aims to help facilitate both activities. It automates the archiving of datasets, including Darwin Core Archives, and is a citable backup of a version of the dataset.
+Data review and archiving can be a time-consuming process, especially when done manually. This review report aims to help facilitate both activities. It automates the archiving of datasets, including Darwin Core Archives, and is a citable backup of a version of the dataset. 
 
-This review includes summary statistics about, and observations about, the dataset under review:
+This review includes summary statistics about, and observations about, the dataset under review: 
 
 > _insert_ 
 
-For additional metadata related to this dataset, please visit [https://github.com/AgentschapPlantentuinMeise/ashForestInteractions](https://github.com/AgentschapPlantentuinMeise/ashForestInteractions) and inspect associated metadata files including, but not limited to, _README.md_, _eml.xml_, and/or _globi.json_. _should this really just be a link to the GBIF metadata?_
+For additional metadata related to this dataset, please visit _insert_ and inspect associated metadata files including, but not limited to, _README.md_, _eml.xml_, and/or _globi.json_. _should this really just be a link to the GBIF metadata?_ 
 
-_Possible to get the Latimer Core required terms from the metadata? - https://ltc.tdwg.org/quick-reference/_
+_Possible to get the Latimer Core required terms from the metadata? - https://ltc.tdwg.org/quick-reference/_ 
 
-# Methods
+# Methods 
 
-The review is performed through programmatic scripts that leverage tools like Preston [@Preston], Elton [@Elton], Nomer [@Nomer], combined with third-party tools like grep, mlr, tail and head.
+The review is performed through programmatic scripts that leverage tools like Preston [@Preston], Elton [@Elton], Nomer [@Nomer], combined with third-party tools like grep, mlr, tail and head. 
 
  | tool name | version | 
  | --- | --- | 
@@ -50,7 +50,7 @@ The review is performed through programmatic scripts that leverage tools like Pr
  | [duckdb](https://duckdb.org/) | 1.3.1 |  
 : Tools used in this review process
 
-The review process can be described in the form of the script below ^[Note that you have to first get the data (e.g., via elton pull AgentschapPlantentuinMeise/ashForestInteractions) before being able to generate reviews (e.g., elton review AgentschapPlantentuinMeise/ashForestInteractions), extract interaction claims (e.g., elton interactions AgentschapPlantentuinMeise/ashForestInteractions), or list taxonomic names (e.g., elton names AgentschapPlantentuinMeise/ashForestInteractions)].
+The review process can be described in the form of the script below ^[Note that you have to first get the data (e.g., via elton pull AgentschapPlantentuinMeise/ashForestInteractions) before being able to generate reviews (e.g., elton review AgentschapPlantentuinMeise/ashForestInteractions), extract interaction claims (e.g., elton interactions AgentschapPlantentuinMeise/ashForestInteractions), or list taxonomic names (e.g., elton names AgentschapPlantentuinMeise/ashForestInteractions)]. 
 
 ~~~
 # get versioned copy of the dataset (size approx. 2.94MiB) under review 
@@ -69,11 +69,11 @@ You can find a copy of the full review script at [_insert_]. See also [GitHub](_
 
 # Results
 
-In the following sections, the results of the review are summarized [^1]. Then, links to the detailed review reports are provided.
+In the following sections, the results of the review are summarized [^1]. Then, links to the detailed review reports are provided. 
 
 ## Files
 
-The following files are produced in this review:
+The following files are produced in this review: 
 
  filename | description
  --- | ---  
@@ -105,11 +105,11 @@ The following files are produced in this review:
 
 Note that [_data.zip_](data.zip) file in this archive contains the complete, unmodified archived dataset under review. 
 
-## Collection Statistics
+## Collection Statistics 
 
-![Biotic Interaction Data Model](interaction.svg)
+![Biotic Interaction Data Model](interaction.svg) 
 
-In this review, collection statistics are modeled as Darwin Core[^4] values. In addition, metadata provided by the collection is reviewed for compliance with the Latimer Core Standard[^5] for describing collections. "Latimer Core has been developed to fill this gap: it is designed to be a flexible, sustainable framework of terms that can be assembled to create records that accurately represent a grouping of objects at any level of granularity, from an entire collection of an institution to a few objects in a single drawer."[^5] 
+In this review, collection statistics are modeled as Darwin Core[^4] or Latimer Core[^5] terms for describing collections. 
 
 The dataset under review, named _insert_, is _insert_ in size and contains _insert occurence records with _insert_ unique taxon names (e.g., Fraxinus excelsior).
 
