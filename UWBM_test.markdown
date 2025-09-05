@@ -84,17 +84,17 @@ An exhaustive list of occurences can be found in gzipped [csv](indexed-interacti
 
 ### Collection Statistics 
 
-**Number of unique occurences:** _insert_ 
-**Number of occurences added since last review:** _insert_ 
-**Number of occurences removed since last review:** _insert_ 
+**Number of unique occurences:** _insert_  
+**Number of occurences added since last review:** _insert_  
+**Number of occurences removed since last review:** _insert_  
 
 _Can we provide a last 12 months growth graph using previous reports? wish list - maybe once we have confirmed this is a good idea_ 
 
 ### Taxonomic Context 
 
-**Number of unique taxonNames:** _insert_ 
-**Number of taxonName added since last review:** _insert_ 
-**Number of taxonName removed since last review:** _insert_ 
+**Number of unique taxonNames:** _insert_  
+**Number of taxonName added since last review:** _insert_  
+**Number of taxonName removed since last review:** _insert_  
 
 **Most Frequently Mentioned Taxon Names (up to 20 most frequent)**
 
@@ -114,27 +114,27 @@ _Can we provide a last 12 months growth graph using previous reports? wish list 
 
 ### Temporal Context
 
-**Earliest eventDate:** _insert_ 
-**Latest eventDate:** _insert_ 
+**Earliest eventDate:** _insert_  
+**Latest eventDate:** _insert_  
 
 _note this requires splitting eventDate": "1989-07-12/1989-07-12_ 
 
 ### Geologic Context 
 
-**earliestEonOrLowestEonothem:** _insert_ 
-**latestEonOrLowestEonothem:** _insert_ 
+**earliestEonOrLowestEonothem:** _insert_  
+**latestEonOrLowestEonothem:** _insert_  
 
-**earliestEraOrLowestErathem:** _insert_ 
-**latestEraOrLowestErathem:** _insert_ 
+**earliestEraOrLowestErathem:** _insert_  
+**latestEraOrLowestErathem:** _insert_  
 
-**earliestPeriodOrLowestSystem:** _insert_ 
-**latestPeriodOrLowestSystem:** _insert_ 
+**earliestPeriodOrLowestSystem:** _insert_  
+**latestPeriodOrLowestSystem:** _insert_  
 
-**earliestEpochOrLowestSeries:** _insert_ 
-**latestEpochOrLowestSeries:** _insert_ 
+**earliestEpochOrLowestSeries:** _insert_  
+**latestEpochOrLowestSeries:** _insert_  
 
-**earliestAgeOrLowestStage:** _insert_ 
-**latestAgeOrLowestStage:** _insert_ 
+**earliestAgeOrLowestStage:** _insert_  
+**latestAgeOrLowestStage:** _insert_  
 
 ## Files
 
