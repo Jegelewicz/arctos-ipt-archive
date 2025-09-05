@@ -238,10 +238,14 @@ Original data provided by (GBIF Administrative Contact contact details as provid
 Administrative point of contact: _insert_
 Administrative point of contact email: _insert_ 
 
+via VertNet IPT[^6]
+
 Nomer was responsible for name alignments. Elton carried out dataset extraction, and generated the review notes. Preston tracked, versioned, and packaged, the dataset under review.
 
+# References
 [^1]: Disclaimer: The results in this review should be considered friendly, yet naive, notes from an unsophisticated robot. Please keep that in mind when considering the review results. 
 [^2]: According to http://opendefinition.org/: "Open data is data that can be freely used, re-used and redistributed by anyone - subject only, at most, to the requirement to attribute and sharealike."
 [^3]: Bradley J (2025). UWBM Mammalogy Collection (Arctos). University of Washington Burke Museum. Occurrence dataset https://doi.org/10.15468/qziy3w accessed via GBIF.org on 2025-09-05. _from GBIF API_
 [^4]: Darwin Core Maintenance Group. 2021. Darwin Core Quick Reference Guide. Biodiversity Information Standards (TDWG). https://dwc.tdwg.org/terms/
 [^5]: https://ltc.tdwg.org/
+[^6]: https://www.vertnet.org/share/ipt/
