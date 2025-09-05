@@ -1,10 +1,11 @@
 ---
 title: Versioned Archive and Review of Collection Statistics found within _insert_ 
 author: 
-  - by Nomer, Elton and Preston, three naive review bots 
-  - review@globalbioticinteractions.org 
-  - https://globalbioticinteractions.org/contribute 
-  - https://github.com/AgentschapPlantentuinMeise/ashForestInteractions/issues  
+  - _insert Administrative point of contact_; _insert Administrative point of contact address_; _insert Administrative point of contact email_ 
+  - Mayfield-Meyer, Teresa J.; Albuquerque, New Mexico, USA; jegelewicz66@yahoo.com
+  - Poelen, Jorrit; Minneapolis, Minnesota, USA; jhpoelen@jhpoelen.nl
+  - Nomer, Elton and Preston, three naive review bots; review@globalbioticinteractions.org; https://globalbioticinteractions.org/contribute; https://github.com/AgentschapPlantentuinMeise/ashForestInteractions/issues
+ 
 abstract: |
   Natural history collections are part of our global heritage and a priceless resource for research and education. Information about the contents of Natural History Collections may be captured in datasets and published digitally via the Global Biodiversity Information Facility (GBIF) Integrated Publishing Toolkit (IPT)[^8] as Darwin Core Archives (DwC-A)[^9]. We present a review and archiving process for such an openly accessible digital dataset of known origin and discuss its outcome. The dataset under review, named _insert_, has fingerprint _insert_, is _insert_ in size and contains _insert_ occurences with _insert_ unique taxon names. This report includes summaries of collection statistics, taxonomic context, geographic context, temporal context, geologic context, and an archived version of the dataset from which the reviews are derived. 
 
@@ -30,7 +31,9 @@ This review includes summary statistics about, and observations about, the datas
 
 > _insert_ 
 
-For additional metadata related to this dataset, please visit _insert_ and inspect associated metadata files including, but not limited to, _README.md_, _eml.xml_, and/or _globi.json_. _should this really just be a link to the GBIF metadata?_ 
+For additional metadata related to this dataset, please visit _insert_ and inspect associated metadata files including, but not limited to, _README.md_, _eml.xml_, and/or _globi.json_. 
+
+_should this really just be a link to the GBIF metadata?_ 
 
 _Possible to get the Latimer Core required terms from the metadata? - https://ltc.tdwg.org/quick-reference/_ 
 
@@ -73,69 +76,65 @@ In the following sections, the results of the review are summarized [^1]. Then, 
 
 ## Review Summary 
 
-![Biotic Interaction Data Model](interaction.svg) 
-
-In this review, collection statistics are modeled as Darwin Core[^4] or Latimer Core[^5] terms for describing collections. 
+In this review, collection statistics are modeled as Darwin Core[^4] or Latimer Core[^5] terms. 
 
 The dataset under review, named _insert_, is _insert_ in size and contains _insert occurence records with _insert_ unique taxon names (e.g., Fraxinus excelsior).
 
-An exhaustive list of occurences can be found in gzipped [csv](indexed-interactions.csv.gz), [tsv](indexed-interactions.tsv.gz) and [parquet](indexed-interactions.parquet) archives. To facilitate discovery, a preview of claims available in the gzipped html page at [indexed-interactions.html.gz](indexed-interactions.html.gz) are shown below.
-
-The exhaustive list was used to create the following data summaries below.
+An exhaustive list of occurences can be found in gzipped [csv](indexed-interactions.csv.gz), [tsv](indexed-interactions.tsv.gz) and [parquet](indexed-interactions.parquet) archives. The exhaustive list was used to create the following data summaries below.
 
 ### Collection Statistics 
 
-Number of unique occurences: _insert_
-Number of occurences added since last review: _insert_
-Number of occurences removed since last review: _insert_
+**Number of unique occurences:** _insert_
+**Number of occurences added since last review:** _insert_
+**Number of occurences removed since last review:** _insert_
 
 _Can we provide a last 12 months growth graph using previous reports? wish list - maybe once we have confirmed this is a good idea_
 
 ### Taxonomic Context
 
-Number of unique taxonNames: _insert_
-Number of taxonName added since last review: _insert_
-Number of taxonName removed since last review: _insert_ 
+**Number of unique taxonNames:** _insert_
+**Number of taxonName added since last review:** _insert_
+**Number of taxonName removed since last review:** _insert_ 
 
-: Most Frequently Mentioned taxonName (up to 20 most frequent)
+**Most Frequently Mentioned Taxon Names (up to 20 most frequent)**
 
 | scientificName | count |
 | --- | --- |
 
 ### Geographic Context
 
-: Most represented Countries (up to 10 most frequent)
+**Most represented Countries (up to 10 most frequent)**
 | country | count |
 | -- | -- |
 
-: Most represented States (up to 10 most frequent)
+**Most represented States (up to 10 most frequent)**
 
 | stateProvince | count |
 | --- | --- |
 
 ### Temporal Context
 
-Earliest eventDate: _insert_ 
-Latest eventDate: _insert_ 
+**Earliest eventDate:** _insert_ 
+**Latest eventDate:** _insert_ 
 
-**note this requires splitting eventDate": "1989-07-12/1989-07-12** 
+_note this requires splitting eventDate": "1989-07-12/1989-07-12_ 
 
 ### Geologic Context 
 
-earliestEonOrLowestEonothem: _insert_ 
-latestEonOrLowestEonothem: _insert_ 
+**earliestEonOrLowestEonothem:** _insert_ 
+**latestEonOrLowestEonothem:** _insert_ 
 
-earliestEraOrLowestErathem: _insert_ 
-latestEraOrLowestErathem: _insert_ 
+**earliestEraOrLowestErathem:** _insert_ 
+**latestEraOrLowestErathem:** _insert_ 
 
-earliestPeriodOrLowestSystem: _insert_ 
-latestPeriodOrLowestSystem: _insert_ 
+**earliestPeriodOrLowestSystem:** _insert_ 
+**latestPeriodOrLowestSystem:** _insert_ 
 
-earliestEpochOrLowestSeries: _insert_ 
-latestEpochOrLowestSeries: _insert_ 
+**earliestEpochOrLowestSeries:** _insert_ 
+**latestEpochOrLowestSeries:** _insert_ 
 
-earliestAgeOrLowestStage: _insert_ 
-latestAgeOrLowestStage: _insert_ 
+**earliestAgeOrLowestStage:** _insert_ 
+**latestAgeOrLowestStage:** _insert_ 
 
 ## Files
 
@@ -177,9 +176,6 @@ Learn more about the structure of this download at _insert_), by opening a [GitH
 
 Another way to discover the dataset under review is by searching for it on the [_insert_](_insert_).
 
-
-: List of Available Name Alignment Reports
-
 ## Additional Reviews
 
 Elton, Nomer, and other tools may have difficulties interpreting existing species interaction datasets. Or, they may misbehave, or otherwise show unexpected behavior. As part of the review process, detailed review notes are kept that document possibly misbehaving, or confused, review bots. An sample of review notes associated with this review can be found below.
@@ -202,6 +198,7 @@ In addition, you can find the most frequently occurring notes in the table below
 
 For additional information on review notes, please have a look at the first 500 [Review Notes](review-sample.html) in html format or the download full gzipped [csv](review.csv.gz) or [tsv](review.tsv.gz) archives.
 
+_do we need any of the GloBI stuuf?_
 ## GloBI Review Badge
 
 As part of the review, a review badge is generated. This review badge can be included in webpages to indicate the review status of the dataset under review. 
@@ -233,7 +230,7 @@ We thank the many humans that created us and those who created and maintained th
 
 # Author contributions
 
-Original data provided by (GBIF Administrative Contact contact details as provided to GBIF. _get from GBIF API - https://www.gbif.org/dataset/830eb5d0-f762-11e1-a439-00145eb45e9a#contacts)
+(GBIF Administrative Contact contact details as provided to GBIF. _get from GBIF API - https://www.gbif.org/dataset/830eb5d0-f762-11e1-a439-00145eb45e9a#contacts) provided the original data reviewed in this report.
 
 Administrative point of contact: _insert_
 Administrative point of contact email: _insert_ 
@@ -242,11 +239,14 @@ via VertNet IPT[^6]
 
 Nomer was responsible for name alignments. Elton carried out dataset extraction, and generated the review notes. Preston tracked, versioned, and packaged, the dataset under review.
 
-_these are sorta references, but also not - I think we should clean them up_
-[^1]: Disclaimer: The results in this review should be considered friendly, yet naive, notes from an unsophisticated robot. Please keep that in mind when considering the review results. 
-[^2]: According to http://opendefinition.org/: "Open data is data that can be freely used, re-used and redistributed by anyone - subject only, at most, to the requirement to attribute and sharealike."
+Teresa J. Mayfield-Meyer developed the text and results content for the reports produced in this review.
+
+Jorrit Poelen developed the scripts used to create results values for the reports produced in this review.
 
 # References
+_the first two are sorta references, but also not - I think we should clean them up_
+[^1]: Disclaimer: The results in this review should be considered friendly, yet naive, notes from an unsophisticated robot. Please keep that in mind when considering the review results. 
+[^2]: According to http://opendefinition.org/: "Open data is data that can be freely used, re-used and redistributed by anyone - subject only, at most, to the requirement to attribute and sharealike."
 [^3]: Bradley J (2025). UWBM Mammalogy Collection (Arctos). University of Washington Burke Museum. Occurrence dataset https://doi.org/10.15468/qziy3w accessed via GBIF.org on 2025-09-05. _from GBIF API_
 [^4]: Darwin Core Maintenance Group. 2021. Darwin Core Quick Reference Guide. Biodiversity Information Standards (TDWG). https://dwc.tdwg.org/terms/
 [^5]: Biodiversity Information Standards (TDWG). (n.d.). Latimer Core Documentation. Latimer Core. https://ltc.tdwg.org/ 
