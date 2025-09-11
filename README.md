@@ -12,8 +12,9 @@ Following, you can start installing the required software as described below.
  * mlr for working with tables ```brew install miller``` see https://miller.readthedocs.io/en/latest/installing-miller/
  * pv for estimating sizes of files ```brew install pv```
  * pandoc for generating reports in pdf/html etc. ```brew install pandoc```
- * xmllint for working with EML xml files ```brew install xmllint```
+ * xmllint for working with EML xml files ```brew install xmlstarlet```
  * jq for working with json files ```brew install jq```
+ * pdflatex for working ```brew install basictex```
  * Preston for working with biodiversity data ```brew install globalbioticinteractions/globi/preston``` See also https://globalbioticinteractions.org/preston for install instructions
 
 ## Check Versions 
@@ -25,6 +26,10 @@ git --version
 preston --version
 mlr --version
 pv --version
+xmllint --version
+pdflatex --version
+jq --version
+pandoc --version
 ```
 
 ## Clone this repository

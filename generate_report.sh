@@ -104,8 +104,6 @@ elton review AgentschapPlantentuinMeise/ashForestInteractions\
 
 or visually, in a process diagram.
 
-![Review Process Overview](process.svg)
-
 You can find a copy of the full review script at [_insert_]. See also [GitHub](_insert_). 
 
 # Results
@@ -184,29 +182,7 @@ The following files are produced in this review:
 
  filename | description
  --- | ---  
- [biblio.bib](biblio.bib) | list of bibliographic reference of this review 
- [check-dataset.sh](check-dataset.sh) | data review workflow/process as expressed in a bash script
- [data.zip](data.zip) | a versioned archive of the data under review
- [HEAD](HEAD) | the digital signature of the data under review
- [index.docx](index.docx) | review in MS Word format 
- [index.html](index.html) | review in HTML format 
- [index.md](index.md) |  review in Pandoc markdown format
- [index.pdf](index.pdf) | review in PDF format
- [indexed-citations.csv.gz](indexed-citations.csv.gz) | list of distinct reference citations for reviewed species interaction claims in gzipped comma-separated values file format 
- [indexed-citations.html.gz](indexed-citations.html.gz) | list of distinct reference citations for reviewed species interactions claims in gzipped html file format
- [indexed-citations.tsv.gz](indexed-citations.tsv.gz) | list of distinct reference citations for reviewed species interaction claims in gzipped tab-separated values format
- [nanopub-sample.trig](nanopub-sample.trig) | first 500 species interaction claims as expressed in the nanopub format [@Nanopub]
- [nanopub.trig.gz](nanopub.trig.gz) | species interaction claims as expressed in the nanopub format [@Nanopub]
- [process.svg](process.svg) | diagram summarizing the data review processing workflow 
- [prov.nq](prov.nq) | origin of the dataset under review as expressed in rdf/nquads 
- [review.csv.gz](review.csv.gz) | review notes associated with the dataset under review in gzipped comma-separated values format 
- [review.html.gz](review.html.gz) | review notes associated with the dataset under review in gzipped html format
- [review.tsv.gz](review.tsv.gz) | review notes associated with the dataset under review in gzipped tab-separated values format
- [review-sample.csv](review-sample.csv) | first 500 review notes associated with the dataset under review in comma-separated values format
- [review-sample.html](review-sample.html) | first 500 review notes associated with the dataset under review in html format
- [review-sample.tsv](review-sample.tsv) | first 500 review notes associated with the dataset under review in tab-separated values format
- [review.svg](review.svg) | a review badge generated as part of the dataset review process
- [zenodo.json](zenodo.json) | metadata of this review expressed in Zenodo record metadata
+ ... | ...
 
 ## Archived Dataset
 
@@ -245,18 +221,7 @@ _do we need any of the GloBI stuff?_
 
 As part of the review, a review badge is generated. This review badge can be included in webpages to indicate the review status of the dataset under review. 
 
-![Picture of a GloBI Review Badge ^[Up-to-date status of the GloBI Review Badge can be retrieved from the [GloBI Review Depot](https://depot.globalbioticinteractions.org/reviews/AgentschapPlantentuinMeise/ashForestInteractions/review.svg)]](review.svg) 
-
 Note that if the badge is green, no review notes were generated. If the badge is yellow, the review bots may need some help with interpreting the species interaction data.
-
-## GloBI Index Badge
-
-If the dataset under review has been [registered with GloBI](https://globalbioticinteractions.org/contribute), and has been succesfully indexed by GloBI, the GloBI Index Status Badge will turn green. This means that the dataset under review was indexed by GloBI and is available through GloBI services and derived data products. 
-
-![Picture of a GloBI Index Badge ^[Up-to-date status of the GloBI Index Badge can be retrieved from [GloBI's API](https://api.globalbioticinteractions.org/interaction.svg?interactionType=ecologicallyRelatedTo&accordingTo=globi:AgentschapPlantentuinMeise/ashForestInteractions&refutes=true&refutes=false)]](https://api.globalbioticinteractions.org/interaction.svg?interactionType=ecologicallyRelatedTo&accordingTo=globi:AgentschapPlantentuinMeise/ashForestInteractions&refutes=true&refutes=false)
-
-If you'd like to keep track of reviews or index status of the dataset under review, please visit GloBI's dataset index ^[At time of writing (2025-07-24) the version of the GloBI dataset index was available at [https://globalbioticinteractions.org/datasets](https://globalbioticinteractions.org/datasets)] for badge examples. 
-
 
 # Discussion
 
