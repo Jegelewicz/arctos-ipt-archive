@@ -38,3 +38,12 @@ pandoc --version
 git clone https://github.com/Jegelewicz/arctos-ipt-archive
 ```
 
+to get a recent version use
+
+```
+git pull --rebase
+```
+
+in the repository directory (e.g., ```arctos-ipt-archive```).
+
+## 
