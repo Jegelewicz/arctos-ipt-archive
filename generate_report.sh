@@ -32,7 +32,7 @@ datasetTaxonFrequencyTable=$(cat <(echo scientificName) <($(list_taxa)) | mlr --
 generate_report() {
   cat <<_EOF_
 ---
-title: Versioned Archive and Review of Collection Statistics found within _insert_ 
+title: Versioned Archive and Review of Collection Statistics found within ${datasetName} 
 author: 
   - _insert Administrative point of contact_; _insert Administrative point of contact address_; _insert Administrative point of contact email_[^11] 
   - Mayfield-Meyer, Teresa J.; Albuquerque, New Mexico, USA; jegelewicz66@yahoo.com
