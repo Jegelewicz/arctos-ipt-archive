@@ -46,4 +46,9 @@ git pull --rebase
 
 in the repository directory (e.g., ```arctos-ipt-archive```).
 
-## 
+## Generate default report
+
+```
+./generate_report.sh > report.pdf
+```
+ 
