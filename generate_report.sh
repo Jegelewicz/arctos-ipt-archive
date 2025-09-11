@@ -40,6 +40,7 @@ author:
   - Nomer, Elton and Preston, three naive review bots; review@globalbioticinteractions.org; https://globalbioticinteractions.org/contribute; https://github.com/AgentschapPlantentuinMeise/ashForestInteractions/issues
 identifier:
   - "urn:lsid:gbif.org:dataset:830eb5d0-f762-11e1-a439-00145eb45e9a"
+  - https://gbif.org/dataset/830eb5d0-f762-11e1-a439-00145eb45e9a
   - https://ipt.vertnet.org/archive.do?r=uwbm_mammals 
   - "https://linker.bio/urn:uuid:830eb5d0-f762-11e1-a439-00145eb45e9a"
   - https://ipt.vertnet.org/archive.do?r=uwbm_mammals 
