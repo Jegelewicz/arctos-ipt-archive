@@ -23,3 +23,10 @@ preston --version
 mlr --version
 pv --version
 ```
+
+## Clone this repository
+
+```
+git clone https://github.com/Jegelewicz/arctos-ipt-archive
+```
+
