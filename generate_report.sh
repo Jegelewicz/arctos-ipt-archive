@@ -27,7 +27,7 @@ datasetRecordCount=$(list_records | wc -l)
 datasetVolume=$(preston cat $dwca_id | pv -f -b 2>&1 1>/dev/null | tr '\r' '\n' | grep -E '[0-9]' | tail -n1)
 datasetTaxonCount=$(list_taxa | sort | uniq | wc -l)
 datasetTaxonMostFrequent=$(list_taxa | sort | uniq -c | sort -nr | head -1 | sed -E 's/^\s+[0-9]+//g')
-datasetTaxonFrequencyTable=$(cat <(echo scientificName) <($(list_taxa)) | mlr --itsvlite --omd count-distinct -f scientificName then sort -nr count | head)
+datasetTaxonFrequencyTable=$(cat <(echo scientificName) <(list_taxa) | mlr --itsvlite --omd count-distinct -f scientificName then sort -nr count | head -n22)
 
 generate_report() {
   cat <<_EOF_
