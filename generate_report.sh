@@ -21,6 +21,15 @@ list_taxa() {
  | jq --raw-output '.["http://rs.tdwg.org/dwc/terms/scientificName"]'
 }
 
+list_event_dates() {
+  list_records\
+ | jq --raw-output '.["http://rs.tdwg.org/dwc/terms/eventDate"]'\
+ | tr '/' '\n'\
+ | grep -Eo "^[0-9]{4}.*"\
+ | sort\
+ | uniq
+}
+
 citation="$(preston ls | preston cite)"
 datasetName=$(preston cat "$eml_id" | xmllint --xpath '//dataset/title/text()' -)
 datasetRecordCount=$(list_records | wc -l)
@@ -154,10 +163,8 @@ ${datasetTaxonFrequencyTable}
 
 ### Temporal Context
 
-**Earliest eventDate:** _insert_  
-**Latest eventDate:** _insert_  
-
-_note this requires splitting eventDate": "1989-07-12/1989-07-12_ 
+**Earliest eventDate:** $(list_event_dates | head -1)  
+**Latest eventDate:** $(list_event_dates | tail -1)  
 
 ### Geologic Context 
 
