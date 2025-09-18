@@ -141,20 +141,19 @@ ${datasetTaxonFrequencyTable}
 
 ### Geographic Context
 
-The dataset includes occurences from ${datasetCountryCount} unique countries. An exhaustive list of unique countries can be found in [Unique Country](indexed-names.csv.gz). The 10 most frequently encountered countries are listed below:
+The dataset includes occurences from ${datasetCountryCount} unique countries. An exhaustive list of unique countries can be found in [Unique Country](countries.csv). The 10 most frequently encountered countries are listed below:
 
 ${datasetCountryFrequencyTable}
 : **Most Frequently Mentioned Countries (up to 10 most frequent)**
 
-The dataset includes occurences from ${datasetStateCount} unique states. An exhaustive list of unique states can be found in [Unique State](indexed-names.csv.gz). The 10 most frequently encountered states are listed below:
+The dataset includes occurences from ${datasetStateCount} unique states. An exhaustive list of unique states can be found in [Unique State](states.csv). The 10 most frequently encountered states are listed below:
 
 ${datasetStateFrequencyTable}
 : **Most Frequently Mentioned States (up to 10 most frequent)**
 
 ### Temporal Context
 
-**Earliest eventDate:** $(list_event_dates | head -1)  
-**Latest eventDate:** $(list_event_dates | tail -1)  
+The dataset includes occurences from $(list_event_dates | head -1) to $(list_event_dates | tail -1). 
 
 <!--- ### Geologic Context 
 
@@ -194,7 +193,8 @@ The following files are produced in this review:
 | taxa.html |	taxonomic names found in the dataset under review in gzipped html format | 
 | taxa.tsv |	taxonomic names found in the dataset under review in gzipped tab-separated values format | 
 | taxa.parquet |	taxonomic names found in the dataset under review in Apache Parquet format | 
-| countries | a list of unique countries and their frequency found in the dataset in comma-separated values format |
+| countries.csv | a list of unique countries and their frequency found in the dataset in comma-separated values format | 
+| states.csv | a list of unique states and their frequency found in the dataset in comma-separated values format | 
 | process.svg |	diagram summarizing the data review processing workflow | 
 | prov.nq |	origin of the dataset under review as expressed in rdf/nquads | 
 | zenodo.json |	metadata of this review expressed in Zenodo record metadata | 
