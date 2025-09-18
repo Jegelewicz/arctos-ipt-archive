@@ -111,7 +111,7 @@ The review is performed through programmatic scripts that leverage tools like Pr
  | [pandoc](https://pandoc.org/) | 3.1.6.1 |  
  | [duckdb](https://duckdb.org/) | 1.3.1 |  
 
-The full review script can be found at [_insert_]. See also [GitHub](_insert_). 
+The full review script can be found at [_insert_]. See also [GitHub](https://github.com/Jegelewicz/arctos-ipt-archive/blob/main/generate_report.sh). 
 
 # Results
 
