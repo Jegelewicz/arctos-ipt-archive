@@ -48,6 +48,7 @@ list_basisOfRecord() {
 
 citation="$(preston ls | preston cite)"
 datasetName=$(preston cat "$eml_id" | xmllint --xpath '//dataset/title/text()' -)
+datasetLicense=$(preston cat "$eml_id" | xmllint --xpath '//dataset/licensed/licenseName()' -)
 datasetRecordCount=$(list_records | wc -l)
 datasetVolume=$(preston cat $dwca_id | pv -f -b 2>&1 1>/dev/null | tr '\r' '\n' | grep -E '[0-9]' | tail -n1)
 datasetTaxonCount=$(list_taxa | sort | uniq | wc -l)
@@ -91,7 +92,7 @@ reference-section-title: References
 
 ## Data Review and Archive 
 
-Data review and archiving can be a time-consuming process, especially when done manually. This review report aims to help facilitate both activities. It automates the archiving of Darwin Core Archives, and is a citable backup of a version of the dataset. The dataset under review is named ${datasetName}, has fingerprint ${dwca_id}, and is ${datasetVolume} in size. 
+Data review and archiving can be a time-consuming process, especially when done manually. This review report aims to help facilitate both activities. It automates the archiving of Darwin Core Archives, and is a citable backup of a version of the dataset. The dataset under review is named ${datasetName}, has fingerprint ${dwca_id}, and is ${datasetVolume} in size. The dataset license is ${datasetLicense}.
 
 For additional metadata related to this dataset, please visit _insert_ and inspect associated metadata files including, but not limited to, _README.md_, _eml.xml_, and/or _globi.json_. 
 
