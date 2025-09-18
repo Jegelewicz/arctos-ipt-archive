@@ -61,10 +61,10 @@ generate_report() {
 ---
 title: Versioned Archive and Review of Collection Statistics found within ${datasetName}[^3] 
 author: 
-  - _insert Administrative point of contact_; _insert Administrative point of contact address_; _insert Administrative point of contact email_[^11] 
+  - "_insert Administrative point of contact_; _insert Administrative point of contact address_; _insert Administrative point of contact email_" 
   - "Mayfield-Meyer, Teresa J.; https://orcid.org/0000-0002-1970-7044" 
-  - Poelen, Jorrit; Minneapolis, Minnesota, USA; jhpoelen@jhpoelen.nl; https://orcid.org/0000-0003-3138-4118 
-  - Nomer, Elton and Preston, three naive review bots; review@globalbioticinteractions.org; https://globalbioticinteractions.org/contribute; https://github.com/AgentschapPlantentuinMeise/ashForestInteractions/issues 
+  - "Poelen, Jorrit; https://orcid.org/0000-0003-3138-4118" 
+  - "Nomer, Elton and Preston, three naive review bots; review@globalbioticinteractions.org; https://globalbioticinteractions.org/contribute; https://github.com/AgentschapPlantentuinMeise/ashForestInteractions/issues" 
 identifier:
   - "urn:lsid:gbif.org:dataset:830eb5d0-f762-11e1-a439-00145eb45e9a" 
   - https://gbif.org/dataset/830eb5d0-f762-11e1-a439-00145eb45e9a 
