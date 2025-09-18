@@ -55,6 +55,7 @@ datasetTaxonMostFrequent=$(list_taxa | sort | uniq -c | sort -nr | head -1 | sed
 datasetTaxonFrequencyTable=$(cat <(echo scientificName) <(list_taxa) | mlr --itsvlite --omd count-distinct -f scientificName then sort -nr count | head -n22)
 datasetCountryCount=$(list_country | sort | uniq | wc -l)
 datasetCountryFrequencyTable=$(cat <(echo country) <(list_country) | mlr --itsvlite --omd count-distinct -f country then sort -nr count | head -n12)
+datasetStateCount=$(list_stateProvince | sort | uniq | wc -l)
 datasetStateFrequencyTable=$(cat <(echo stateProvince) <(list_stateProvince) | mlr --itsvlite --omd count-distinct -f stateProvince then sort -nr count | head -n12)
 datasetTypeFrequencyTable=$(cat <(echo basisOfRecord) <(list_basisOfRecord) | mlr --itsvlite --omd count-distinct -f basisOfRecord then sort -nr count)
 
@@ -90,7 +91,7 @@ reference-section-title: References
 
 ## Data Review and Archive 
 
-Data review and archiving can be a time-consuming process, especially when done manually. This review report aims to help facilitate both activities. It automates the archiving Darwin Core Archives, and is a citable backup of a version of the dataset. The dataset under review is named ${datasetName}, has fingerprint ${dwca_id}, and is ${datasetVolume} in size. 
+Data review and archiving can be a time-consuming process, especially when done manually. This review report aims to help facilitate both activities. It automates the archiving of Darwin Core Archives, and is a citable backup of a version of the dataset. The dataset under review is named ${datasetName}, has fingerprint ${dwca_id}, and is ${datasetVolume} in size. 
 
 For additional metadata related to this dataset, please visit _insert_ and inspect associated metadata files including, but not limited to, _README.md_, _eml.xml_, and/or _globi.json_. 
 
@@ -140,10 +141,12 @@ ${datasetTaxonFrequencyTable}
 
 ### Geographic Context
 
-The dataset includes occurences from ${datasetCountryCount} unique countries. An exhaustive list of unique countries can be found in [Unique Country](indexed-names.csv.gz). The 20 most frequently encountered names are listed below:
+The dataset includes occurences from ${datasetCountryCount} unique countries. An exhaustive list of unique countries can be found in [Unique Country](indexed-names.csv.gz). The 10 most frequently encountered countries are listed below:
 
 ${datasetCountryFrequencyTable}
 : **Most Frequently Mentioned Countries (up to 10 most frequent)**
+
+The dataset includes occurences from ${datasetStateCount} unique states. An exhaustive list of unique states can be found in [Unique State](indexed-names.csv.gz). The 10 most frequently encountered states are listed below:
 
 ${datasetStateFrequencyTable}
 : **Most Frequently Mentioned States (up to 10 most frequent)**
