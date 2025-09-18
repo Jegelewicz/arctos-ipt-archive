@@ -7,6 +7,7 @@ set -x
 
 # this is a specific version of UWBM Mammals for now
 dwca_id="hash://sha256/97d6e90fa1a811e5a253ae25b51fa5b99d74356f997a27bded2aa08db4a1b5b7"
+dwc_id_md5="hash://md5/53f31a089339194f333d2e3995dbb05e"
 eml_id='zip:hash://sha256/97d6e90fa1a811e5a253ae25b51fa5b99d74356f997a27bded2aa08db4a1b5b7!/eml.xml'
 
 list_records() {
