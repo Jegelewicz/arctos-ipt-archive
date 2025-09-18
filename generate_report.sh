@@ -48,7 +48,7 @@ list_basisOfRecord() {
 
 citation="$(preston ls | preston cite)"
 datasetName=$(preston cat "$eml_id" | xmllint --xpath '//dataset/title/text()' -)
-datasetLicense=$(preston cat "$eml_id" | xmllint --xpath '//dataset/licensed/licenseName()' -)
+datasetLicense=$(preston cat "$eml_id" | xmllint --xpath '//dataset/licensed/licenseName/text()' -)
 datasetRecordCount=$(list_records | wc -l)
 datasetVolume=$(preston cat $dwca_id | pv -f -b 2>&1 1>/dev/null | tr '\r' '\n' | grep -E '[0-9]' | tail -n1)
 datasetTaxonCount=$(list_taxa | sort | uniq | wc -l)
