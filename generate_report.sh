@@ -52,6 +52,8 @@ datasetLicense=$(preston cat "$eml_id" | xmllint --xpath '//dataset/licensed/lic
 datasetPubDate=$(preston cat "$eml_id" | xmllint --xpath '//dataset/pubDate/text()' -)
 datasetAbstract=$(preston cat "$eml_id" | xmllint --xpath '//dataset/abstract/para/text()' -)
 datasetGeog=$(preston cat "$eml_id" | xmllint --xpath '//dataset/coverage/geographicCoverage/geographicDescription/text()' -)
+datasetTaxonRank=$(preston cat "$eml_id" | xmllint --xpath '//dataset/coverage/taxonomicCoverage/taxonomicClassification/taxonRankName/text()' -)
+datasetTaxonRankValue=$(preston cat "$eml_id" | xmllint --xpath '//dataset/coverage/taxonomicCoverage/taxonomicClassification/taxonRankValue/text()' -)
 datasetRecordCount=$(list_records | wc -l)
 datasetVolume=$(preston cat $dwca_id | pv -f -b 2>&1 1>/dev/null | tr '\r' '\n' | grep -E '[0-9]' | tail -n1)
 datasetTaxonCount=$(list_taxa | sort | uniq | wc -l)
@@ -142,6 +144,10 @@ ${datasetTypeFrequencyTable}
 
 ### Taxonomic Context 
 
+#### Taxonomic Coverage
+
+The dataset metadata describes its taxonomic coverage as ${datasetTaxonRank} ${datasetTaxonRankValue}.
+
 The dataset includes ${datasetTaxonCount} unique taxonomic names with _insert_ names added since last review and _insert_ names removed since last review. An exhaustive list of unique taxon names can be found in [Unique Taxa](indexed-names.csv.gz). The 20 most frequently encountered names are listed below:
 
 ${datasetTaxonFrequencyTable}
@@ -149,11 +155,15 @@ ${datasetTaxonFrequencyTable}
 
 ### Geographic Context
 
-The dataset describes its geographic coverage as follows:
+#### Geographic Coverage
+
+The dataset metadata describes its geographic coverage as follows:
 
 ${datasetGeog}
 
-and includes occurences from ${datasetCountryCount} unique countries. An exhaustive list of unique countries can be found in [Unique Country](countries.csv). The 10 most frequently encountered countries are listed below:
+#### Geographic Coverage Review
+
+The dataset includes occurences from ${datasetCountryCount} unique countries. An exhaustive list of unique countries can be found in [Unique Country](countries.csv). The 10 most frequently encountered countries are listed below:
 
 ${datasetCountryFrequencyTable}
 : **Most Frequently Mentioned Countries (up to 10 most frequent)**
