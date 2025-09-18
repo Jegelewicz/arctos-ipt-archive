@@ -54,7 +54,7 @@ identifier:
   - "https://linker.bio/urn:uuid:830eb5d0-f762-11e1-a439-00145eb45e9a"
   - https://ipt.vertnet.org/archive.do?r=uwbm_mammals 
 abstract: |
-  Natural history collections are part of our global heritage and a priceless resource for research and education. Information about the contents of Natural History Collections may be captured in datasets and published digitally via the Global Biodiversity Information Facility (GBIF) Integrated Publishing Toolkit (IPT)as Darwin Core Archives (DwC-A). We present a review and archiving process for such an openly accessible digital dataset of known origin and discuss its outcome. The dataset under review, named ${datasetName}, has fingerprint %DATASET_ID%, is ${datasetVolume} in size and contains ${datasetRecordCount} occurrences with %DATASET_TAXON_COUNT% unique taxon names (e.g., %DATASET_TAXON_MOST_FREQUENT%). This report includes summaries of collection statistics, taxonomic context, geographic context, temporal context, geologic context, and an archived version of the dataset from which the reviews are derived. 
+  Natural history collections are part of our global heritage and a priceless resource for research and education. Information about the contents of Natural History Collections may be captured in datasets and published digitally via the Global Biodiversity Information Facility (GBIF) Integrated Publishing Toolkit (IPT)as Darwin Core Archives (DwC-A). We present a review and archiving process for such an openly accessible digital dataset of known origin and discuss its outcome. The dataset under review, named ${datasetName}, has fingerprint %DATASET_ID%, is ${datasetVolume} in size and contains ${datasetRecordCount} occurrences with ${datasetTaxonCount} unique taxon names (e.g., ${datasetTaxonMostFrequent}). This report includes summaries of collection statistics, taxonomic context, geographic context, temporal context, geologic context, and an archived version of the dataset from which the reviews are derived. 
 
 bibliography: biblio.bib 
 keywords: 
@@ -68,7 +68,7 @@ reference-section-title: References
 
 # Introduction 
 
-"Natural history collections are part of our global heritage and a priceless resource for research and education."[^7] Information about the contents of Natural History Collections may be captured in datasets and published digitally via the Global Biodiversity Information Facility (GBIF) Integrated Publishing Toolkit (IPT)[^8] as Darwin Core Archives (DwC-A)[^9]. We present a review and archiving process for such an openly accessible digital dataset of known origin and discuss its outcome. The dataset under review is named ${datasetName}, has fingerprint %DATASET_ID%, and is %DATASET_SIZE% in size. 
+"Natural history collections are part of our global heritage and a priceless resource for research and education."[^7] Information about the contents of Natural History Collections may be captured in datasets and published digitally via the Global Biodiversity Information Facility (GBIF) Integrated Publishing Toolkit (IPT)[^8] as Darwin Core Archives (DwC-A)[^9]. We present a review and archiving process for such an openly accessible digital dataset of known origin and discuss its outcome. The dataset under review is named ${datasetName}, has fingerprint ${dwca_id}, and is ${datasetVolume} in size. 
 
 ## Data Review and Archive 
 
@@ -123,7 +123,7 @@ In the following sections, the results of the review are summarized [^1]. Then, 
 
 In this review, collection statistics are modeled as Darwin Core[^4] or Latimer Core[^5] terms. 
 
-The dataset under review, named ${datasetName}, is %DATASET_VOLUME% in size and contains %DATASET_RECORD_COUNT% occurence records with ${datasetTaxonCount} unique taxon names (e.g., %DATASET_TAXON_MOST_FREQUENT%).
+The dataset under review, named ${datasetName}, is ${datasetVolume} in size and contains ${datasetRecordCount} occurence records with ${datasetTaxonCount} unique taxon names (e.g., %DATASET_TAXON_MOST_FREQUENT%).
 
 An exhaustive list of occurences can be found in gzipped [csv](indexed-interactions.csv.gz), [tsv](indexed-interactions.tsv.gz) and [parquet](indexed-interactions.parquet) archives. The exhaustive list was used to create the following data summaries below.
 
