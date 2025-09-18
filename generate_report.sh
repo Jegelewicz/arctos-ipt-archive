@@ -48,7 +48,7 @@ datasetTaxonCount=$(list_taxa | sort | uniq | wc -l)
 datasetTaxonMostFrequent=$(list_taxa | sort | uniq -c | sort -nr | head -1 | sed -E 's/^\s+[0-9]+//g')
 datasetTaxonFrequencyTable=$(cat <(echo scientificName) <(list_taxa) | mlr --itsvlite --omd count-distinct -f scientificName then sort -nr count | head -n22)
 datasetCountryFrequencyTable=$(cat <(echo country) <(list_country) | mlr --itsvlite --omd count-distinct -f country then sort -nr count | head -n12)
-datasetStateFrequencyTable=$(cat <(echo country) <(list_stateProvince) | mlr --itsvlite --omd count-distinct -f stateProvince then sort -nr count | head -n12)
+datasetStateFrequencyTable=$(cat <(echo stateProvince) <(list_stateProvince) | mlr --itsvlite --omd count-distinct -f stateProvince then sort -nr count | head -n12)
 
 generate_report() {
   cat <<_EOF_
