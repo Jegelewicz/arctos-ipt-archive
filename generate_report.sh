@@ -62,8 +62,7 @@ generate_report() {
 title: Versioned Archive and Review of Collection Statistics found within ${datasetName}[^3] 
 author: 
   - _insert Administrative point of contact_; _insert Administrative point of contact address_; _insert Administrative point of contact email_[^11] 
-  - name: Mayfield-Meyer, Teresa J.
-    affiliation: "https://orcid.org/0000-0002-1970-7044" 
+  - "Mayfield-Meyer, Teresa J.; https://orcid.org/0000-0002-1970-7044" 
   - Poelen, Jorrit; Minneapolis, Minnesota, USA; jhpoelen@jhpoelen.nl; https://orcid.org/0000-0003-3138-4118 
   - Nomer, Elton and Preston, three naive review bots; review@globalbioticinteractions.org; https://globalbioticinteractions.org/contribute; https://github.com/AgentschapPlantentuinMeise/ashForestInteractions/issues 
 identifier:
