@@ -53,20 +53,20 @@ datasetStateFrequencyTable=$(cat <(echo stateProvince) <(list_stateProvince) | m
 generate_report() {
   cat <<_EOF_
 ---
-title: Versioned Archive and Review of Collection Statistics found within ${datasetName} 
+title: Versioned Archive and Review of Collection Statistics found within ${datasetName}[^3] 
 author: 
   - _insert Administrative point of contact_; _insert Administrative point of contact address_; _insert Administrative point of contact email_[^11] 
-  - Mayfield-Meyer, Teresa J.; Albuquerque, New Mexico, USA; jegelewicz66@yahoo.com; https://orcid.org/0000-0002-1970-7044
-  - Poelen, Jorrit; Minneapolis, Minnesota, USA; jhpoelen@jhpoelen.nl; https://orcid.org/0000-0003-3138-4118
-  - Nomer, Elton and Preston, three naive review bots; review@globalbioticinteractions.org; https://globalbioticinteractions.org/contribute; https://github.com/AgentschapPlantentuinMeise/ashForestInteractions/issues
+  - Mayfield-Meyer, Teresa J.; Albuquerque, New Mexico, USA; jegelewicz66@yahoo.com; https://orcid.org/0000-0002-1970-7044 
+  - Poelen, Jorrit; Minneapolis, Minnesota, USA; jhpoelen@jhpoelen.nl; https://orcid.org/0000-0003-3138-4118 
+  - Nomer, Elton and Preston, three naive review bots; review@globalbioticinteractions.org; https://globalbioticinteractions.org/contribute; https://github.com/AgentschapPlantentuinMeise/ashForestInteractions/issues 
 identifier:
-  - "urn:lsid:gbif.org:dataset:830eb5d0-f762-11e1-a439-00145eb45e9a"
-  - https://gbif.org/dataset/830eb5d0-f762-11e1-a439-00145eb45e9a
+  - "urn:lsid:gbif.org:dataset:830eb5d0-f762-11e1-a439-00145eb45e9a" 
+  - https://gbif.org/dataset/830eb5d0-f762-11e1-a439-00145eb45e9a 
   - https://ipt.vertnet.org/archive.do?r=uwbm_mammals 
-  - "https://linker.bio/urn:uuid:830eb5d0-f762-11e1-a439-00145eb45e9a"
-  - https://ipt.vertnet.org/archive.do?r=uwbm_mammals 
+  - "https://linker.bio/urn:uuid:830eb5d0-f762-11e1-a439-00145eb45e9a" 
+  - https://ipt.vertnet.org/archive.do?r=uwbm_mammals  
 abstract: |
-  Natural history collections are part of our global heritage and a priceless resource for research and education. Information about the contents of Natural History Collections may be captured in datasets and published digitally via the Global Biodiversity Information Facility (GBIF) Integrated Publishing Toolkit (IPT)as Darwin Core Archives (DwC-A). We present a review and archiving process for such an openly accessible digital dataset of known origin and discuss its outcome. The dataset under review, named ${datasetName}, has fingerprint %DATASET_ID%, is ${datasetVolume} in size and contains ${datasetRecordCount} occurrences with ${datasetTaxonCount} unique taxon names (e.g., ${datasetTaxonMostFrequent}). This report includes summaries of collection statistics, taxonomic context, geographic context, temporal context, geologic context, and an archived version of the dataset from which the reviews are derived. 
+  Natural history collections are part of our global heritage and a priceless resource for research and education. Information about the contents of Natural History Collections may be captured in datasets and published digitally via the Global Biodiversity Information Facility (GBIF) Integrated Publishing Toolkit (IPT) as Darwin Core Archives (DwC-A). We present a review and archiving process for such an openly accessible digital dataset of known origin and discuss its outcome. The dataset under review, named ${datasetName}[^3], has fingerprint ${dwca_id}, is ${datasetVolume} in size and contains ${datasetRecordCount} occurrences with ${datasetTaxonCount} unique taxon names (e.g., ${datasetTaxonMostFrequent}). This report includes summaries of collection statistics, taxonomic context, geographic context, temporal context, geologic context, and an archived version of the dataset from which the reviews are derived. 
 
 bibliography: biblio.bib 
 keywords: 
@@ -135,7 +135,7 @@ In the following sections, the results of the review are summarized [^1]. Then, 
 
 In this review, collection statistics are modeled as Darwin Core[^4] or Latimer Core[^5] terms. 
 
-The dataset under review, named ${datasetName}, is ${datasetVolume} in size and contains ${datasetRecordCount} occurence records with ${datasetTaxonCount} unique taxon names (e.g., %DATASET_TAXON_MOST_FREQUENT%).
+The dataset under review, named ${datasetName}[^3], is ${datasetVolume} in size and contains ${datasetRecordCount} occurence records with ${datasetTaxonCount} unique taxon names (e.g., %DATASET_TAXON_MOST_FREQUENT%).
 
 An exhaustive list of occurences can be found in gzipped [csv](indexed-interactions.csv.gz), [tsv](indexed-interactions.tsv.gz) and [parquet](indexed-interactions.parquet) archives. The exhaustive list was used to create the following data summaries below.
 
