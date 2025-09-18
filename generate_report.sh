@@ -158,7 +158,7 @@ ${datasetTaxonFrequencyTable}
 
 ### Geographic Context
 
-${dataseCountryFrequencyTable}
+${datasetCountryFrequencyTable}
 : Most Frequently Mentioned Countries (up to 10 most frequent)**
 
 
