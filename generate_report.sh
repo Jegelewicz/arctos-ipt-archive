@@ -51,6 +51,9 @@ datasetName=$(preston cat "$eml_id" | xmllint --xpath '//dataset/title/text()' -
 datasetLicense=$(preston cat "$eml_id" | xmllint --xpath '//dataset/licensed/licenseName/text()' -)
 datasetPubDate=$(preston cat "$eml_id" | xmllint --xpath '//dataset/pubDate/text()' -)
 datasetAbstract=$(preston cat "$eml_id" | xmllint --xpath '//dataset/abstract/para/text()' -)
+datasetContactGiven=$(preston cat "$eml_id" | xmllint --xpath '//dataset/contact/individualName/givenName/text()' -)
+datasetContactSur=$(preston cat "$eml_id" | xmllint --xpath '//dataset/contact/individualName/surName/text()' -)
+datasetContactEmail=$(preston cat "$eml_id" | xmllint --xpath '//dataset/contact/electronicMailAddress/text()' -)
 datasetGeog=$(preston cat "$eml_id" | xmllint --xpath '//dataset/coverage/geographicCoverage/geographicDescription/text()' -)
 datasetTaxonRank=$(preston cat "$eml_id" | xmllint --xpath '//dataset/coverage/taxonomicCoverage/taxonomicClassification/taxonRankName/text()' -)
 datasetTaxonRankValue=$(preston cat "$eml_id" | xmllint --xpath '//dataset/coverage/taxonomicCoverage/taxonomicClassification/taxonRankValue/text()' -)
@@ -144,9 +147,11 @@ ${datasetTypeFrequencyTable}
 
 ### Taxonomic Context 
 
-#### Taxonomic Coverage
+**Taxonomic Coverage**
 
 The dataset metadata describes its taxonomic coverage as ${datasetTaxonRank} ${datasetTaxonRankValue}.
+
+**Taxonomic Coverage Review**
 
 The dataset includes ${datasetTaxonCount} unique taxonomic names with _insert_ names added since last review and _insert_ names removed since last review. An exhaustive list of unique taxon names can be found in [Unique Taxa](indexed-names.csv.gz). The 20 most frequently encountered names are listed below:
 
@@ -155,13 +160,13 @@ ${datasetTaxonFrequencyTable}
 
 ### Geographic Context
 
-#### Geographic Coverage
+**Geographic Coverage**
 
 The dataset metadata describes its geographic coverage as follows:
 
 ${datasetGeog}
 
-#### Geographic Coverage Review
+**Geographic Coverage Review**
 
 The dataset includes occurences from ${datasetCountryCount} unique countries. An exhaustive list of unique countries can be found in [Unique Country](countries.csv). The 10 most frequently encountered countries are listed below:
 
@@ -239,13 +244,13 @@ This report also showcases the reuse of machine-actionable (meta)data, something
 
 # Acknowledgements
 
-We thank the many humans that created us and those who created and maintained the data, software and other intellectual resources that were used for producing this review. In addition, we are grateful for the natural resources providing the basis for these human and bot activities.  
+We thank the many humans that created us and those who created and maintained the data, software and other intellectual resources that were used for producing this review. In addition, we are grateful for the natural resources providing the basis for these human and bot activities.
+
+${datasetContactGiven} ${datasetContactSur}; ${datasetContactEmail} provided the original data reviewed in this report.
 
 # Author contributions
 
-_GBIF Administrative Contact contact details as provided to GBIF. _get from GBIF API - https://www.gbif.org/dataset/830eb5d0-f762-11e1-a439-00145eb45e9a#contacts: Administrative point of contact insert_ provided the original data reviewed in this report.
-
-Nomer was responsible for name alignments. Elton carried out dataset extraction, and generated the review notes. Preston tracked, versioned, and packaged, the dataset under review.
+Elton carried out dataset extraction, and generated the review notes. Preston tracked, versioned, and packaged, the dataset under review.
 
 Teresa J. Mayfield-Meyer developed the text and results content for the reports produced in this review.
 
