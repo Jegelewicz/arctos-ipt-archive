@@ -93,7 +93,7 @@ reference-section-title: References
 
 ## Data Review and Archive 
 
-Data review and archiving can be a time-consuming process, especially when done manually. This review report aims to help facilitate both activities. It automates the archiving of Darwin Core Archives, and is a citable backup of a version of the dataset. The dataset under review is named ${datasetName}, was published on ${datasetpubDate}, has fingerprint ${dwca_id}, and is ${datasetVolume} in size with a ${datasetLicense} data license.
+Data review and archiving can be a time-consuming process, especially when done manually. This review report aims to help facilitate both activities. It automates the archiving of Darwin Core Archives, and is a citable backup of a version of the dataset. The dataset under review is named ${datasetName}, was published on ${datasetPubDate}, has fingerprint ${dwca_id}, and is ${datasetVolume} in size with a ${datasetLicense} data license.
 
 For additional metadata related to this dataset, please visit _insert_ and inspect associated metadata files including, but not limited to, _README.md_, _eml.xml_, and/or _globi.json_. 
 
