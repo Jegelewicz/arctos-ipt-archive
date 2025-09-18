@@ -66,7 +66,7 @@ author:
   - "Poelen, Jorrit; https://orcid.org/0000-0003-3138-4118" 
   - "Nomer; https://github.com/globalbioticinteractions/nomer" 
   - "Elton; https://github.com/globalbioticinteractions/elton"
-  - "Preston; " 
+  - "Preston; https://github.com/bio-guoda/preston" 
 identifier:
   - "urn:lsid:gbif.org:dataset:830eb5d0-f762-11e1-a439-00145eb45e9a" 
   - https://gbif.org/dataset/830eb5d0-f762-11e1-a439-00145eb45e9a 
@@ -74,7 +74,7 @@ identifier:
   - "https://linker.bio/urn:uuid:830eb5d0-f762-11e1-a439-00145eb45e9a" 
   - https://ipt.vertnet.org/archive.do?r=uwbm_mammals  
 abstract: |
-  Natural history collections are part of our global heritage and a priceless resource for research and education. Information about the contents of Natural History Collections may be captured in datasets and published digitally via the Global Biodiversity Information Facility (GBIF) Integrated Publishing Toolkit (IPT)[^8] as Darwin Core Archives (DwC-A)[^9]. We present a review and archiving process for such an openly accessible digital dataset of known origin and discuss its outcome. The dataset under review, named ${datasetName}[^3], has fingerprint ${dwca_id}, is ${datasetVolume} in size and contains ${datasetRecordCount} occurrences with ${datasetTaxonCount} unique taxon names (e.g., ${datasetTaxonMostFrequent}). This report includes summaries of collection statistics, taxonomic context, geographic context, temporal context, and an archived version of the dataset from which the reviews are derived. 
+  Natural history collections are part of our global heritage and a priceless resource for research and education. Information about the contents of Natural History Collections may be captured in datasets and published digitally via the Global Biodiversity Information Facility (GBIF) Integrated Publishing Toolkit (IPT)[^8] as Darwin Core Archives (DwC-A)[^9]. We present a review and archiving process for such an openly accessible digital dataset of known origin and discuss its outcome. The dataset under review, named ${datasetName}[^3], has fingerprint ${dwca_id}, is ${datasetVolume} in size and contains $${datasetRecordCount}$ occurrences with ${datasetTaxonCount} unique taxon names (e.g., ${datasetTaxonMostFrequent}). This report includes summaries of collection statistics, taxonomic context, geographic context, temporal context, and an archived version of the dataset from which the reviews are derived. 
 
 bibliography: biblio.bib 
 keywords: 
