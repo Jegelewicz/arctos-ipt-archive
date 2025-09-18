@@ -53,6 +53,7 @@ datasetVolume=$(preston cat $dwca_id | pv -f -b 2>&1 1>/dev/null | tr '\r' '\n' 
 datasetTaxonCount=$(list_taxa | sort | uniq | wc -l)
 datasetTaxonMostFrequent=$(list_taxa | sort | uniq -c | sort -nr | head -1 | sed -E 's/^\s+[0-9]+//g')
 datasetTaxonFrequencyTable=$(cat <(echo scientificName) <(list_taxa) | mlr --itsvlite --omd count-distinct -f scientificName then sort -nr count | head -n22)
+datasetCountryCount=$(list_country | sort | uniq | wc -l)
 datasetCountryFrequencyTable=$(cat <(echo country) <(list_country) | mlr --itsvlite --omd count-distinct -f country then sort -nr count | head -n12)
 datasetStateFrequencyTable=$(cat <(echo stateProvince) <(list_stateProvince) | mlr --itsvlite --omd count-distinct -f stateProvince then sort -nr count | head -n12)
 datasetTypeFrequencyTable=$(cat <(echo basisOfRecord) <(list_basisOfRecord) | mlr --itsvlite --omd count-distinct -f basisOfRecord then sort -nr count)
@@ -85,25 +86,17 @@ reference-section-title: References
 
 # Introduction 
 
-"Natural history collections are part of our global heritage and a priceless resource for research and education."[^7] Information about the contents of Natural History Collections may be captured in datasets and published digitally via the Global Biodiversity Information Facility (GBIF) Integrated Publishing Toolkit (IPT)[^8] as Darwin Core Archives (DwC-A)[^9]. We present a review and archiving process for such an openly accessible digital dataset of known origin and discuss its outcome. The dataset under review is named ${datasetName}, has fingerprint ${dwca_id}, and is ${datasetVolume} in size. 
+"Natural history collections are part of our global heritage and a priceless resource for research and education."[^7] Information about the contents of Natural History Collections may be captured in datasets and published digitally via the Global Biodiversity Information Facility (GBIF) Integrated Publishing Toolkit (IPT)[^8] as Darwin Core Archives (DwC-A)[^9]. We present a review and archiving process for such an openly accessible digital dataset of known origin and discuss its outcome. 
 
 ## Data Review and Archive 
 
-Data review and archiving can be a time-consuming process, especially when done manually. This review report aims to help facilitate both activities. It automates the archiving of datasets, including Darwin Core Archives, and is a citable backup of a version of the dataset. 
-
-This review includes summary statistics about, and observations about, the dataset under review: 
-
-> ${citation} 
+Data review and archiving can be a time-consuming process, especially when done manually. This review report aims to help facilitate both activities. It automates the archiving Darwin Core Archives, and is a citable backup of a version of the dataset. The dataset under review is named ${datasetName}, has fingerprint ${dwca_id}, and is ${datasetVolume} in size. 
 
 For additional metadata related to this dataset, please visit _insert_ and inspect associated metadata files including, but not limited to, _README.md_, _eml.xml_, and/or _globi.json_. 
 
-_should this really just be a link to the GBIF metadata?_ 
-
-_Possible to get the Latimer Core required terms from the metadata? - https://ltc.tdwg.org/quick-reference/_ 
-
 # Methods 
 
-The review is performed through programmatic scripts that leverage tools like Preston [@Preston], Elton [@Elton], Nomer [@Nomer], combined with third-party tools like grep, mlr, tail and head. 
+The review is performed through programmatic scripts that leverage tools like Preston [@Preston], Elton [@Elton], and Nomer [@Nomer] combined with third-party tools like grep, mlr, tail and head. 
 
 ## Tools used in this review process
  | tool name | version | 
@@ -117,11 +110,11 @@ The review is performed through programmatic scripts that leverage tools like Pr
  | [pandoc](https://pandoc.org/) | 3.1.6.1 |  
  | [duckdb](https://duckdb.org/) | 1.3.1 |  
 
-You can find a copy of the full review script at [_insert_]. See also [GitHub](_insert_). 
+The full review script can be found at [_insert_]. See also [GitHub](_insert_). 
 
 # Results
 
-In the following sections, the results of the review are summarized. The results in this review should be considered friendly, yet naive, notes from an unsophisticated robot. Please keep that in mind when considering the review results. Then, links to the detailed review reports are provided. 
+In the following sections, the results of the review are summarized. The results in this review should be considered friendly notes from an unsophisticated robot. Please keep that in mind when considering the review results. Links to the detailed review reports are also provided. 
 
 ## Review Summary 
 
@@ -129,29 +122,25 @@ In this review, collection statistics are modeled as Darwin Core[^4] or Latimer 
 
 The dataset under review, named ${datasetName}[^3], is ${datasetVolume} in size and contains ${datasetRecordCount} occurence records with ${datasetTaxonCount} unique taxon names (e.g., %DATASET_TAXON_MOST_FREQUENT%).
 
-An exhaustive list of occurences can be found in gzipped [csv](indexed-interactions.csv.gz), [tsv](indexed-interactions.tsv.gz) and [parquet](indexed-interactions.parquet) archives. The exhaustive list was used to create the following data summaries below.
+An exhaustive list of occurences can be found in gzipped [csv](occurence.csv), [tsv](occurence.tsv) and [parquet](occurence.parquet) archives. The exhaustive list was used to create the following data summaries below.
 
 ### Collection Statistics 
 
-The dataset includes ${datasetRecordCount} unique occurrences with _insert_ occurrences added since last review and _insert_ occurrences removed since last review. The related occurences are supported by the following basis of record types.  
+The dataset includes ${datasetRecordCount} unique occurrences with _insert_ occurrences added since last review and _insert_ occurrences removed since last review. The related occurences are supported by the following basis of record types:  
 
 ${datasetTypeFrequencyTable}
 : **Occurence Data Basis of Record Counts**  
 
-_Can we provide a last 12 months growth graph using previous reports? wish list - maybe once we have confirmed this is a good idea_ 
-
 ### Taxonomic Context 
 
-| name | value |
-| --- | --- | 
-| **Number of unique taxonNames:** | ${datasetTaxonCount} | 
-| **Number of taxonName added since last review:** | _insert_ | 
-| **Number of taxonName removed since last review:** |  _insert_ | 
+The dataset includes ${datasetTaxonCount} unique taxonomic names with _insert_ names added since last review and _insert_ names removed since last review. An exhaustive list of unique taxon names can be found in [Unique Taxa](indexed-names.csv.gz). The 20 most frequently encountered names are listed below:
 
 ${datasetTaxonFrequencyTable}
 : **Most Frequently Mentioned Taxon Names (up to 20 most frequent)**
 
 ### Geographic Context
+
+The dataset includes occurences from ${datasetCountryCount} unique countries. An exhaustive list of unique countries can be found in [Unique Country](indexed-names.csv.gz). The 20 most frequently encountered names are listed below:
 
 ${datasetCountryFrequencyTable}
 : **Most Frequently Mentioned Countries (up to 10 most frequent)**
@@ -185,29 +174,31 @@ ${datasetStateFrequencyTable}
 
 The following files are produced in this review: 
 
-| filename | description |
+| filename | description | 
 | --- | --- | 
-| biblio.bib |	list of bibliographic reference of this review |
-| check-dataset.sh |	data review workflow/process as expressed in a bash script |
-| data.zip |	a versioned archive of the data under review |
-| HEAD |	the digital signature of the data under review |
-| index.docx |	review in MS Word format |
-| index.html |	review in HTML format |
-| index.md |	review in Pandoc markdown format |
-| index.pdf |	review in PDF format |
-| indexed-names.csv.gz |	taxonomic names indexed from the dataset under review in gzipped comma-separated values format |
-| indexed-names.html.gz |	taxonomic names found in the dataset under review in gzipped html format |
-| indexed-names.tsv.gz |	taxonomic names found in the dataset under review in gzipped tab-separated values format |
-| indexed-names.parquet |	taxonomic names found in the dataset under review in Apache Parquet format |
-| process.svg |	diagram summarizing the data review processing workflow |
-| prov.nq |	origin of the dataset under review as expressed in rdf/nquads |
-| zenodo.json |	metadata of this review expressed in Zenodo record metadata |
+| biblio.bib |	list of bibliographic reference of this review | 
+| check-dataset.sh |	data review workflow/process as expressed in a bash script | 
+| data.zip |	a versioned archive of the data under review | 
+| HEAD |	the digital signature of the data under review | 
+| review.docx |	review in MS Word format | 
+| review.html |	review in HTML format | 
+| review.md |	review in Pandoc markdown format | 
+| review.pdf |	review in PDF format | 
+| occurence.csv | the dwc occurence file as obtained from the GBIF IPT in comma-separated values format | 
+| occurence.tsv | the dwc occurence file as obtained from the GBIF IPT in tab-separated values format | 
+| occurence.parquet | the dwc occurence file as obtained from the GBIF IPT in Apache Parquet format | 
+| taxa.csv |	a list of taxonomic names and their frequencey the dataset under review in comma-separated values format | 
+| taxa.html |	taxonomic names found in the dataset under review in gzipped html format | 
+| taxa.tsv |	taxonomic names found in the dataset under review in gzipped tab-separated values format | 
+| taxa.parquet |	taxonomic names found in the dataset under review in Apache Parquet format | 
+| countries | a list of unique countries and their frequency found in the dataset in comma-separated values format |
+| process.svg |	diagram summarizing the data review processing workflow | 
+| prov.nq |	origin of the dataset under review as expressed in rdf/nquads | 
+| zenodo.json |	metadata of this review expressed in Zenodo record metadata | 
 
 ## Archived Dataset
 
 Note that [_data.zip_](data.zip) file in this archive contains the complete, unmodified archived dataset under review. 
-
-You can download the indexed dataset under review at [indexed-interactions.csv.gz](indexed-interactions.csv.gz). A tab-separated file can be found at [indexed-interactions.tsv.gz](indexed-interactions.tsv.gz) 
 
 Learn more about the structure of this download at _insert_), by opening a [GitHub issue](_insert_).
 
@@ -215,15 +206,15 @@ Another way to discover the dataset under review is by searching for it on the [
 
 # Discussion
 
-This review and archive provides a means of creating a citable version of a dataset that changes frequently. This may be useful for dataset managers, including natural history collection data managers, as a backup archive of a shared Darwin Core archive. It also serves as an automated means of creating a trackable citation for the dataset and information about its contents.
+This review and archive provides a means of creating a citable version of a dataset that changes frequently. This may be useful for dataset managers, including natural history collection data managers, as a backup archive of a shared Darwin Core Archive. It also serves as an automated means of creating a trackable citation for the dataset and information about its contents.
 
-This review aims to provide a perspective on the dataset to aid in understanding digitization progress and data quality management. However, it is important to note that this review does *not* assess the quality of the dataset. Instead, it serves as an indication of the open-ness[^2] and FAIRness[^10] of the dataset. In order to perform this review, the data was likely openly available, **F**indable, **A**ccessible, **I**nteroperable and **R**eusable. The current Open-FAIR assessment is qualitative, and a more quantitative approach can be implemented with specified measurement units. 
+This review aims to provide a perspective on the dataset to aid in understanding digitization progress and data quality management. However, it is important to note that this review does *not* assess the quality of the dataset. Instead, it serves as an indication of the open-ness[^2] and FAIRness[^10] of the dataset. In order to perform this review, the data was openly available, **F**indable, **A**ccessible, **I**nteroperable and **R**eusable. The current Open-FAIR assessment is qualitative, and a more quantitative approach can be implemented with specified measurement units. 
 
-This report also showcases the reuse of machine-actionable (meta)data, something highly recommended by the FAIR Data Principles[^10]. Making (meta)data machine-actionable enables more precise procesing by computers, enabling even naive review bots like Nomer and Elton to interpret the data effectively. This capability is crucial for not just automating the generation of reports, but also for facilitating seamless data exchanges which promotes interoperability. 
+This report also showcases the reuse of machine-actionable (meta)data, something highly recommended by the FAIR Data Principles[^10]. Making (meta)data machine-actionable enables more precise procesing by computers, enabling even naive review bots like Nomer and Elton to interpret the data effectively. This capability is crucial for not just automating the generation of reports, but also for facilitating seamless data exchanges and promoting interoperability. 
 
 # Acknowledgements
 
-We thank the many humans that created us and those who created and maintained the data, software and other intellectual resources that were used for producing this review. In addition, we are grateful for the natural resources providing the basis for these human and bot activities. Also, thanks to https://github.com/zygoballus for helping improve the layout of the review tables. 
+We thank the many humans that created us and those who created and maintained the data, software and other intellectual resources that were used for producing this review. In addition, we are grateful for the natural resources providing the basis for these human and bot activities.  
 
 # Author contributions
 
@@ -236,7 +227,6 @@ Teresa J. Mayfield-Meyer developed the text and results content for the reports 
 Jorrit Poelen developed the scripts used to create results values for the reports produced in this review.
 
 # References
-_the first two are sorta references, but also not - I think we should clean them up_
 
 [^2]: According to http://opendefinition.org/: "Open data is data that can be freely used, re-used and redistributed by anyone - subject only, at most, to the requirement to attribute and sharealike."
 [^3]: Bradley J (2025). UWBM Mammalogy Collection (Arctos). University of Washington Burke Museum. Occurrence dataset https://doi.org/10.15468/qziy3w accessed via GBIF.org on 2025-09-05. _from GBIF API_
