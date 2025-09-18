@@ -40,7 +40,7 @@ list_stateProvince() {
  | jq --raw-output '.["http://rs.tdwg.org/dwc/terms/stateProvince"]'
 }
 
-list_recordType() {
+list_basisOfRecord() {
   list_records\
  | jq --raw-output '.["http://rs.tdwg.org/dwc/terms/basisOfRecord"]'
 }
