@@ -30,6 +30,11 @@ list_event_dates() {
  | uniq
 }
 
+list_country() {
+  list_records\
+ | jq --raw-output '.["http://rs.tdwg.org/dwc/terms/country"]'
+}
+
 citation="$(preston ls | preston cite)"
 datasetName=$(preston cat "$eml_id" | xmllint --xpath '//dataset/title/text()' -)
 datasetRecordCount=$(list_records | wc -l)
@@ -37,6 +42,7 @@ datasetVolume=$(preston cat $dwca_id | pv -f -b 2>&1 1>/dev/null | tr '\r' '\n' 
 datasetTaxonCount=$(list_taxa | sort | uniq | wc -l)
 datasetTaxonMostFrequent=$(list_taxa | sort | uniq -c | sort -nr | head -1 | sed -E 's/^\s+[0-9]+//g')
 datasetTaxonFrequencyTable=$(cat <(echo scientificName) <(list_taxa) | mlr --itsvlite --omd count-distinct -f scientificName then sort -nr count | head -n22)
+datasetCountryFrequencyTable=$(cat <(echo country) <(list_country) | mlr --itsvlite --omd count-distinct -f country then sort -nr count | head -n12)
 
 generate_report() {
   cat <<_EOF_
@@ -152,9 +158,9 @@ ${datasetTaxonFrequencyTable}
 
 ### Geographic Context
 
-**Most represented Countries (up to 10 most frequent)**
-| country | count |
-| -- | -- |
+${dataseCountryFrequencyTable}
+: Most Frequently Mentioned Countries (up to 10 most frequent)**
+
 
 **Most represented States (up to 10 most frequent)**
 
