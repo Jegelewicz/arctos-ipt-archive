@@ -66,7 +66,7 @@ identifier:
   - "https://linker.bio/urn:uuid:830eb5d0-f762-11e1-a439-00145eb45e9a" 
   - https://ipt.vertnet.org/archive.do?r=uwbm_mammals  
 abstract: |
-  Natural history collections are part of our global heritage and a priceless resource for research and education. Information about the contents of Natural History Collections may be captured in datasets and published digitally via the Global Biodiversity Information Facility (GBIF) Integrated Publishing Toolkit (IPT)[^8] as Darwin Core Archives (DwC-A)[^9]. We present a review and archiving process for such an openly accessible digital dataset of known origin and discuss its outcome. The dataset under review, named ${datasetName}[^3], has fingerprint ${dwca_id}, is ${datasetVolume} in size and contains ${datasetRecordCount} occurrences with ${datasetTaxonCount} unique taxon names (e.g., ${datasetTaxonMostFrequent}). This report includes summaries of collection statistics, taxonomic context, geographic context, temporal context, geologic context, and an archived version of the dataset from which the reviews are derived. 
+  Natural history collections are part of our global heritage and a priceless resource for research and education. Information about the contents of Natural History Collections may be captured in datasets and published digitally via the Global Biodiversity Information Facility (GBIF) Integrated Publishing Toolkit (IPT)[^8] as Darwin Core Archives (DwC-A)[^9]. We present a review and archiving process for such an openly accessible digital dataset of known origin and discuss its outcome. The dataset under review, named ${datasetName}[^3], has fingerprint ${dwca_id}, is ${datasetVolume} in size and contains ${datasetRecordCount} occurrences with ${datasetTaxonCount} unique taxon names (e.g., ${datasetTaxonMostFrequent}). This report includes summaries of collection statistics, taxonomic context, geographic context, temporal context, and an archived version of the dataset from which the reviews are derived. 
 
 bibliography: biblio.bib 
 keywords: 
@@ -166,14 +166,14 @@ ${datasetCountryFrequencyTable}
 : **Most Frequently Mentioned Countries (up to 10 most frequent)**
 
 ${datasetStateFrequencyTable}
-: **Most represented States (up to 10 most frequent)**
+: **Most Frequently Mentioned States (up to 10 most frequent)**
 
 ### Temporal Context
 
 **Earliest eventDate:** $(list_event_dates | head -1)  
 **Latest eventDate:** $(list_event_dates | tail -1)  
 
-### Geologic Context 
+<!--- ### Geologic Context 
 
 **earliestEonOrLowestEonothem:** _insert_  
 **latestEonOrLowestEonothem:** _insert_  
@@ -188,7 +188,7 @@ ${datasetStateFrequencyTable}
 **latestEpochOrLowestSeries:** _insert_  
 
 **earliestAgeOrLowestStage:** _insert_  
-**latestAgeOrLowestStage:** _insert_  
+**latestAgeOrLowestStage:** _insert_  --->
 
 ## Files
 
