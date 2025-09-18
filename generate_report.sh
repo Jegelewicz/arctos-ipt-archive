@@ -35,6 +35,11 @@ list_country() {
  | jq --raw-output '.["http://rs.tdwg.org/dwc/terms/country"]'
 }
 
+list_stateProvince() {
+  list_records\
+ | jq --raw-output '.["http://rs.tdwg.org/dwc/terms/stateProvince"]'
+}
+
 citation="$(preston ls | preston cite)"
 datasetName=$(preston cat "$eml_id" | xmllint --xpath '//dataset/title/text()' -)
 datasetRecordCount=$(list_records | wc -l)
@@ -43,6 +48,7 @@ datasetTaxonCount=$(list_taxa | sort | uniq | wc -l)
 datasetTaxonMostFrequent=$(list_taxa | sort | uniq -c | sort -nr | head -1 | sed -E 's/^\s+[0-9]+//g')
 datasetTaxonFrequencyTable=$(cat <(echo scientificName) <(list_taxa) | mlr --itsvlite --omd count-distinct -f scientificName then sort -nr count | head -n22)
 datasetCountryFrequencyTable=$(cat <(echo country) <(list_country) | mlr --itsvlite --omd count-distinct -f country then sort -nr count | head -n12)
+datasetStateFrequencyTable=$(cat <(echo country) <(list_stateProvince) | mlr --itsvlite --omd count-distinct -f stateProvince then sort -nr count | head -n12)
 
 generate_report() {
   cat <<_EOF_
@@ -152,20 +158,17 @@ _Can we provide a last 12 months growth graph using previous reports? wish list 
 | **Number of taxonName removed since last review:** |  _insert_ | 
 
 ${datasetTaxonFrequencyTable}
-: Most Frequently Mentioned Taxon Names (up to 20 most frequent)**
+**: Most Frequently Mentioned Taxon Names (up to 20 most frequent)**
 
 
 
 ### Geographic Context
 
 ${datasetCountryFrequencyTable}
-: Most Frequently Mentioned Countries (up to 10 most frequent)**
+**: Most Frequently Mentioned Countries (up to 10 most frequent)**
 
-
+${datasetStateFrequencyTable}
 **Most represented States (up to 10 most frequent)**
-
-| stateProvince | count |
-| --- | --- |
 
 ### Temporal Context
 
