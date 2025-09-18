@@ -117,19 +117,6 @@ The review is performed through programmatic scripts that leverage tools like Pr
  | [pandoc](https://pandoc.org/) | 3.1.6.1 |  
  | [duckdb](https://duckdb.org/) | 1.3.1 |  
 
-The review process can be described in the form of the script below ^[Note that you have to first get the data (e.g., via elton pull AgentschapPlantentuinMeise/ashForestInteractions) before being able to generate reviews (e.g., elton review AgentschapPlantentuinMeise/ashForestInteractions), extract interaction claims (e.g., elton interactions AgentschapPlantentuinMeise/ashForestInteractions), or list taxonomic names (e.g., elton names AgentschapPlantentuinMeise/ashForestInteractions)]. 
-
-~~~
-# get versioned copy of the dataset (size approx. 2.94MiB) under review 
-elton pull AgentschapPlantentuinMeise/ashForestInteractions
-
-# generate review notes
-elton review AgentschapPlantentuinMeise/ashForestInteractions\
- > review.tsv
-~~~
-
-or visually, in a process diagram.
-
 You can find a copy of the full review script at [_insert_]. See also [GitHub](_insert_). 
 
 # Results
@@ -228,7 +215,7 @@ Another way to discover the dataset under review is by searching for it on the [
 
 # Discussion
 
-This review and archive provides a means of creating a citable version of a dataset that changes frequently. This may be useful for dataset managers, including natural history collection data managers, as a backup archive of a shared Darwin Core archive. It also serves as a means of creating a trackable citation for the dataset in an automated way, while also including some information about the contents of the dataset.
+This review and archive provides a means of creating a citable version of a dataset that changes frequently. This may be useful for dataset managers, including natural history collection data managers, as a backup archive of a shared Darwin Core archive. It also serves as an automated means of creating a trackable citation for the dataset and information about its contents.
 
 This review aims to provide a perspective on the dataset to aid in understanding digitization progress and data quality management. However, it is important to note that this review does *not* assess the quality of the dataset. Instead, it serves as an indication of the open-ness[^2] and FAIRness[^10] of the dataset. In order to perform this review, the data was likely openly available, **F**indable, **A**ccessible, **I**nteroperable and **R**eusable. The current Open-FAIR assessment is qualitative, and a more quantitative approach can be implemented with specified measurement units. 
 
