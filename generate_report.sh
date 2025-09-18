@@ -200,7 +200,21 @@ The following files are produced in this review:
 
  filename | description
  --- | ---  
- ... | ...
+biblio.bib |	list of bibliographic reference of this review 
+check-dataset.sh |	data review workflow/process as expressed in a bash script 
+data.zip |	a versioned archive of the data under review 
+HEAD |	the digital signature of the data under review 
+index.docx |	review in MS Word format 
+index.html |	review in HTML format 
+index.md |	review in Pandoc markdown format 
+index.pdf |	review in PDF format 
+indexed-names.csv.gz |	taxonomic names indexed from the dataset under review in gzipped comma-separated values format 
+indexed-names.html.gz |	taxonomic names found in the dataset under review in gzipped html format 
+indexed-names.tsv.gz |	taxonomic names found in the dataset under review in gzipped tab-separated values format 
+indexed-names.parquet |	taxonomic names found in the dataset under review in Apache Parquet format 
+process.svg |	diagram summarizing the data review processing workflow
+prov.nq |	origin of the dataset under review as expressed in rdf/nquads 
+zenodo.json |	metadata of this review expressed in Zenodo record metadata
 
 ## Archived Dataset
 
