@@ -226,35 +226,6 @@ Learn more about the structure of this download at _insert_), by opening a [GitH
 
 Another way to discover the dataset under review is by searching for it on the [_insert_](_insert_).
 
-## Additional Reviews
-
-Elton, Nomer, and other tools may have difficulties interpreting existing species interaction datasets. Additionally, they may misbehave, or otherwise show unexpected behavior. As part of the review process, detailed review notes are kept that document possibly misbehaving, or confused, review bots. An sample of review notes associated with this review can be found below.
-
-| reviewDate | reviewCommentType | reviewComment |
-| --- | --- | --- |
-| 2025-07-24T09:03:02Z | note | found unsupported interaction type with id: [http://purl.obolibrary.org/obo/RO_0002559] and name: [causally influenced by] |
-| 2025-07-24T09:03:02Z | note | found unsupported interaction type with id: [http://purl.obolibrary.org/obo/RO_0002559] and name: [causally influenced by] |
-| 2025-07-24T09:03:02Z | note | found unsupported interaction type with id: [http://purl.obolibrary.org/obo/RO_0002559] and name: [causally influenced by] |
-| 2025-07-24T09:03:02Z | note | found unsupported interaction type with id: [http://purl.obolibrary.org/obo/RO_0002559] and name: [causally influenced by] |
-: First few lines in the review notes.
-
-In addition, you can find the most frequently occurring notes in the table below.
-
-| reviewComment | count |
-| --- | --- |
-| found unsupported interaction type with id: [http://purl.obolibrary.org/obo/RO_0002226] and name: [develops in] | 30 |
-| found unsupported interaction type with id: [http://purl.obolibrary.org/obo/RO_0002559] and name: [causally influenced by] | 21 |
-: Most frequently occurring review notes, if any.
-
-For additional information on review notes, please have a look at the first 500 [Review Notes](review-sample.html) in html format or the download full gzipped [csv](review.csv.gz) or [tsv](review.tsv.gz) archives.
-
-_do we need any of the GloBI stuff?_
-## GloBI Review Badge
-
-As part of the review, a review badge is generated. This review badge can be included in webpages to indicate the review status of the dataset under review. 
-
-Note that if the badge is green, no review notes were generated. If the badge is yellow, the review bots may need some help with interpreting the species interaction data.
-
 # Discussion
 
 This review and archive provides a means of creating a citable version of a dataset that changes frequently. This may be useful for dataset managers, including natural history collection data managers, as a backup archive of a shared Darwin Core archive. It also serves as a means of creating a trackable citation for the dataset in an automated way, while also including some information about the contents of the dataset.
