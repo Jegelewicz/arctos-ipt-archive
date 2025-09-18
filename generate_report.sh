@@ -294,12 +294,5 @@ _EOF_
 }
 
 generate_report\
- | sed -e "s|%CITATION%|$citation|g"\
- | sed -e "s|%DATASET_NAME%|$datasetName|g"\
- | sed -e "s|%DATASET_ID%|$dwca_id|g"\
- | sed -e "s|%DATASET_RECORD_COUNT%|$datasetRecordCount|g"\
- | sed -e "s|%DATASET_TAXON_COUNT%|$datasetTaxonCount|g"\
- | sed -e "s|%DATASET_TAXON_MOST_FREQUENT%|$datasetTaxonMostFrequent|g"\
- | sed -e "s|%DATASET_VOLUME%|$datasetVolume|g"\
- | pandoc --from markdown --to pdf
+  | pandoc --from markdown --to pdf
 
