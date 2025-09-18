@@ -120,7 +120,7 @@ In the following sections, the results of the review are summarized. The results
 
 In this review, collection statistics are modeled as Darwin Core[^4] or Latimer Core[^5] terms. 
 
-The dataset under review, named ${datasetName}[^3], is ${datasetVolume} in size and contains ${datasetRecordCount} occurence records with ${datasetTaxonCount} unique taxon names (e.g., %DATASET_TAXON_MOST_FREQUENT%).
+The dataset under review, named ${datasetName}[^3], is ${datasetVolume} in size and contains ${datasetRecordCount} occurence records with ${datasetTaxonCount} unique taxon names (e.g., ${datasetTaxonMostFrequent}).
 
 An exhaustive list of occurences can be found in gzipped [csv](occurence.csv), [tsv](occurence.tsv) and [parquet](occurence.parquet) archives. The exhaustive list was used to create the following data summaries below.
 
