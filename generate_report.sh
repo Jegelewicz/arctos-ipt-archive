@@ -157,16 +157,16 @@ _Can we provide a last 12 months growth graph using previous reports? wish list 
 | **Number of taxonName added since last review:** | _insert_ | 
 | **Number of taxonName removed since last review:** |  _insert_ | 
 
-: Most Frequently Mentioned Taxon Names (up to 20 most frequent)
 ${datasetTaxonFrequencyTable}
+: **Most Frequently Mentioned Taxon Names (up to 20 most frequent)**
 
 ### Geographic Context
 
 ${datasetCountryFrequencyTable}
-: Most Frequently Mentioned Countries (up to 10 most frequent)
+: **Most Frequently Mentioned Countries (up to 10 most frequent)**
 
-Most represented States (up to 10 most frequent)
 ${datasetStateFrequencyTable}
+: **Most represented States (up to 10 most frequent)**
 
 ### Temporal Context
 
