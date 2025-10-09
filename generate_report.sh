@@ -13,10 +13,8 @@ eml_id="zip:${dwca_id}!/eml.xml"
 
 
 list_records() {
-  preston cat\
- --remote https://linker.bio\
- "${dwca_id}"\
- | preston dwc-stream
+  echo "${dwca_id}"\
+ | preston dwc-stream --remote https://linker.bio
 }
 
 list_taxa() {
