@@ -60,8 +60,41 @@ in the repository directory (e.g., ```arctos-ipt-archive```).
 open report.pdf
 ```
 
-replace report with whatever wou named the report if it was something different
- 
+### Generate Custom Report from Known DwC-A Content
+
+You can also generate non-default reports of DwC-A if you know their sha256 hash
+
+For instance, you can run a report for the Burke Museum dated June 2024 by running
+
+```
+./generate_report.sh\
+ hash://sha256/5521cd12c64ce586376b463fcb1720b672ba87eb7dd581d90e524fa1c52e256b\
+ > report-uwbm-2024-06.pdf
+``` 
+
+### Generate Custom Report from DwC-A Endpoint
+
+First, track the content associated with a dwc-a endpoint using:
+
+```
+preston track\
+ "https://ipt.vertnet.org/archive.do?r=uwbm_mammals"
+```
+
+observe the hash in the last line 
+
+```
+https://ipt.vertnet.org/archive.do?r=uwbm_mammals> <http://purl.org/pav/hasVersion> <hash://sha256/05b9bcff33b906c436a53f13aaea34ab9ed5c3901836126f112e497cfea44229> <urn:uuid:b30f94de-8497-4ac7-a7b2-cbcb431b42bd> .
+```
+
+and pick the hash value to start generating the report
+
+```
+./generate_report.sh\
+ hash://sha256/05b9bcff33b906c436a53f13aaea34ab9ed5c3901836126f112e497cfea44229\
+ > reportX.pdf
+```
+
 ### Get data from preston
 
 ```
